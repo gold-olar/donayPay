@@ -22,15 +22,7 @@ class FormContextProvider extends Component {
         });
     };
 
-    // checkPassword = () => {
-    //     let { password } = this.state;
-    //     let check = password.match(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])([a-zA-Z0-9]{8})$/);
-    //     if (!check){
-    //         this.setState({
-    //             message : "Password must be up to 8 characters and must contain only alphanumeric characters"
-    //         })
-    //     }
-    // }
+   
 
     comparePassword = () => {
         let { password, confirmPassword } = this.state;

@@ -10,7 +10,7 @@ const NotFound = () => {
         <div className ="whole_page" >
            <p className="text-right padding back-home">
           <NavLink  to ="/"> 
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>  GO BACK HOME
+            <i className="fa fa-arrow-left" aria-hidden="true"></i>  GO BACK HOME
             </NavLink></p>
            
 

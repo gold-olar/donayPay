@@ -30,13 +30,11 @@
     text-align: center;
     margin-top: 4%;
     padding: 1% 0%;
-    color: white;
+    color: #555555;
     text-transform: uppercase !important;
     letter-spacing: 1px;
     font-weight: 600;
-    background: #2193b0;  
-    background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);  
-    background: linear-gradient(to left, #6dd5ed, #2193b0); 
+    /* background: #1983B6; */
 }
 .story-input{
     width: 100%;
@@ -79,4 +77,7 @@
 }
 .padding-bottom{
     padding-bottom: 5%;
+}
+.form-heading-{
+    font-size: 150%;
 }

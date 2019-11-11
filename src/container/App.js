@@ -10,6 +10,8 @@ import Login from '../components/LogIn/Login';
 import FormContextProvider from '../contexts/FormContext';
 import Dashboard from '../components/Dashboard/Dashboard';
 import NewCampaign from '../components/NewCampaign/NewCampaign';
+import CampaignFormContextProvider from '../contexts/campaignFormContext';
+import UploadImage from '../components/Upload/Upload';
 
 class App extends Component {
   render() {
@@ -17,20 +19,23 @@ class App extends Component {
 
       <BrowserRouter>
         <FormContextProvider>
-          <div className="App">
+          <CampaignFormContextProvider>
+            <div className="App">
 
-            <Switch>
-              <Route path='/' exact component={IndexPage} />
-              <Route path='/signup' exact component={SignUp} />
-              <Route path='/login' exact component={Login} />
+              <Switch>
 
-              <Route path='/dashboard' exact component={Dashboard} />
-              <Route path ='/newCampaign' exact component={NewCampaign} />
-              <Route path='*' exact component={NotFound} />
-            </Switch>
+                <Route path='/' exact component={IndexPage} />
+                <Route path='/signup' exact component={SignUp} />
+                <Route path='/login' exact component={Login} />
+                <Route path='/dashboard' exact component={Dashboard} />
+                <Route path ='/newCampaign' exact component={NewCampaign} />
+                <Route path ='/upload' exact component={UploadImage} />
+                <Route path='*' exact component={NotFound} />
 
-          </div>
+              </Switch>
 
+            </div>
+          </CampaignFormContextProvider>
         </FormContextProvider>
 
       </BrowserRouter >

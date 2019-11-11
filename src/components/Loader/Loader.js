@@ -4,7 +4,7 @@ import './loader.css'
 const Loader = () => {
     return (
         <div className="animated fadeIn"  id="preloader">
-            <div class="oya-load"></div>
+            <div className="oya-load"></div>
         </div>
     );
 }
