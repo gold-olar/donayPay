@@ -1,0 +1,26 @@
+.campaignCard{
+    width: 18rem;
+    border-bottom: 2px solid #1983B6;
+}
+.campaing_card_image{
+    opacity: 0.4;
+    transition: all 0.3s;
+
+}
+.campaing_card_image:hover{
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+.card-text{
+    color: #555;
+}
+.editLink{
+    font-weight: 600;
+    text-align: center;
+}
+.margin-left{
+    margin-left: 2% !important;
+}
+.card-icon{
+    margin-left: 3%;;
+}

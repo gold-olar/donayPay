@@ -1,0 +1,17 @@
+.not_found{
+    width: 400px;
+    height: auto;
+}
+.whole_page{
+  background: url(./404.svg);
+  height: 100vh;
+  width: auto;
+  /* background-size: cover; */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.back-home{
+    font-weight: 700;
+}

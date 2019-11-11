@@ -1,0 +1,107 @@
+/* footer */
+.footer {
+    background: #1983B6;
+}
+ul li{
+    list-style: none;
+    text-align: left;
+}
+
+.text-theme-2 {
+    color: #000;
+}
+.text-theme-2:hover {
+    color: #000;
+}
+.footer h2 a {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.footer h2 a:hover {
+    color: #fff;
+}
+
+/* footer grids */
+
+.footerv3-top h3 {
+    font-size: 1.3em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+
+.footv3-left h4 a {
+    font-size: 1.3em;
+    letter-spacing: 0.5px;
+    color: #fff !important;
+    padding: 14px 0 0;
+    position: relative;
+    text-transform: capitalize;
+}
+
+h4.footer-title {
+    color: #777;
+    text-transform: capitalize;
+}
+
+.footerv3-top p {
+    font-size: 1em;
+    color: #a3b1bf;
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+
+.footer p a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer p a:hover {
+    color: #fff;
+}
+
+.fv3-contact p {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-top p {
+    max-width: 400px;
+}
+.list-w3pvtits{
+    padding-left: 0%;
+}
+
+.list-w3pvtits li a {
+    color: #fff;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+
+h3.w3f_title {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* //footer */
+.cpy-right {
+    padding: 1vw;
+    background: #1983B6;
+}
+
+.cpy-right p {
+    color: #fff;
+}
+
+.cpy-right a {
+    color: #fff;
+}
+.footer-brand{
+    font-weight: 700;
+}

@@ -1,0 +1,82 @@
+.newCampaign-card{
+    border-radius: 13px;
+    padding: 5%;
+
+}
+.naira{
+    font-size: 280%;
+    color: #1983B6;
+    font-weight: 400;
+
+}
+.goal-field{
+    display: inline-block;
+    width: 60%;
+    border: none !important;
+    font-size: 2rem;
+    border-bottom: 1px solid #555 !important;
+    /* text-decoration: underline; */
+    border-radius: 0px !important;  
+}
+.goal-field:focus {
+    border: none !important;
+    border-bottom: 1px solid #555 !important;
+    outline: none !important;
+    box-shadow: none !important ;
+    font-size: 1.5rem;
+    transition:  all 0.2s;
+}
+.story-header{
+    text-align: center;
+    margin-top: 4%;
+    padding: 1% 0%;
+    color: white;
+    text-transform: uppercase !important;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background: #2193b0;  
+    background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);  
+    background: linear-gradient(to left, #6dd5ed, #2193b0); 
+}
+.story-input{
+    width: 100%;
+}
+.tips-card{
+    padding: 3%;
+}
+.goldin{
+    width: 40px;
+    height:auto;
+    border-radius: 50%;;
+}
+.tips-header{
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 0px;
+    font-size: 90%;
+}
+.border-bottom{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 7%;
+}
+.ensure-text{
+    font-weight: 700;
+    text-align: left;
+    padding-top: 5% !important;
+}
+.ensure-tips{
+    margin-left: -13% !important;
+    font-size: 90%;
+}
+.ensure-tips li{
+    padding: 5px;
+}
+.fa-check{
+    color: green;
+    font-size: 150%;
+    padding-right: 5px;
+}
+.padding-bottom{
+    padding-bottom: 5%;
+}

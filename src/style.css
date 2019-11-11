@@ -1,0 +1,112 @@
+@media (min-width: 576px) {  }
+
+@media (min-width: 768px) {  }
+
+@media (min-width: 992px) {  }
+
+@media (max-width: 1200px) {
+    .image_header {
+        height: 60vh;
+        width: auto;
+    }
+  }
+  @media (max-width: 1100px) {
+    .image_header {
+        height: 50vh;
+        width: auto;
+    }
+    .nav-link {
+        padding: .5rem .3rem;
+    
+    }
+  }
+  @media (max-width: 1000px) {
+    .image_header {
+        height: 43vh;
+        width: auto;
+    }
+    .nav-link {
+        padding: .5rem .1rem;
+    
+    }
+    .logo {
+        height: 50px;
+        width: auto;
+    
+    }
+    .phone-img {
+        height: 300px;
+        width: auto;
+    }
+    .dwnld {
+        width: 127px;
+        height: 120px;
+    
+    }
+    .dwnld-play {
+        height: 61px;
+        width: 151px;
+    
+    }
+    #logo {
+        display: inline !important;
+        padding: 0;
+        text-align: left !important;
+        float: none;
+    
+    }
+    
+    
+  }
+  @media (max-width: 900px) {
+    .phone-img {
+        height: 270px;
+        width: auto;
+        }
+    .light-font-weight {
+            font-size: 80%;
+        }
+    .header-body{
+        padding-bottom: 9%;
+    }
+    .stats-count {
+        font-size: 212%;
+    }
+
+  }
+
+  @media (max-width: 800px) {
+    .image_header{
+        display: none !important;
+    }
+    .header-body {
+        height: 50vh;
+        background: #1983B6;
+        color: #fff;
+        clip-path: polygon(0 0, 100% 0%, 100% 74%, 0 100%);
+    }
+    
+    .header-desc {
+        font-weight: 900;
+        padding: 5%;
+        text-align: center;
+        font-size: 270%;
+        width: 150% !important;
+        margin: auto;
+        position: absolute;
+        left: 27%;
+        top: 10%;
+    }
+    a.reqe-button {
+        color: white;
+        border: 1px solid #fff;
+    }
+    .stats-div{
+        clip-path: polygon(0 40%, 100% 26%, 100% 82%, 0% 100%);
+        padding: 20% 0% 10% 0%;
+    }
+    
+    .phone-img {
+        height: 228px;
+    }
+  }

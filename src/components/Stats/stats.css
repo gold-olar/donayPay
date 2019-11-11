@@ -1,0 +1,47 @@
+.stats-div{
+    background: #1983B6;
+    height: auto;
+    padding: 5%;
+    color: #fff;
+}
+.stats-count{
+    font-size: 290%;
+    font-weight: 600;
+    text-align: center;
+}
+.stats-label{
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+
+}
+.app-advert{
+    padding: 10%;
+}
+.header-donay{
+    font-weight: 700;
+    font-size: 160%;
+
+}
+.available{
+    font-weight: 400;
+    margin-top: 4%;
+    padding-bottom: 5%;
+    font-size: 130%;
+}
+.phone-img{
+    height: 400px;
+    width: auto;
+}
+.app-talk{
+    font-size: 120%;
+}
+.dwnld{
+    width: 210px;
+    height: 120px;
+}
+.dwnld-play{
+    height: 100px;
+    width: 210px;
+
+}

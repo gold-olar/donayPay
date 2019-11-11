@@ -1,0 +1,20 @@
+.image_header{
+    height: 70vh;
+    width: auto;
+}
+.header-desc{
+    font-weight: 900;
+    position: absolute;
+     top:20%;
+     font-size: 270%;
+}
+.get_started_span{
+    font-size: 50%;
+    font-weight: 400;
+    word-spacing: 3px;
+    letter-spacing: 3px;
+
+}
+.header_col{
+    padding-left: 25px;
+}

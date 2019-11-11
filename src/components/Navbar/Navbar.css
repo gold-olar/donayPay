@@ -1,0 +1,219 @@
+a {
+    text-decoration: none !important;
+}
+header {
+    background:transparent;
+}
+a.reqe-button {
+    color: #1983B6;
+    letter-spacing: 1px;
+    border: 1px solid #1983B6;
+    padding: 9px 20px;
+    border-radius: 30px !important;
+    font-size: 14px;
+    display: inline;
+    text-transform: uppercase;
+}
+
+.toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    margin: auto;
+    margin-bottom: 4px;
+    transition: all 400ms linear;
+    cursor: pointer;
+}
+
+.toggle-2,
+.toggle,
+[id^=drop] {
+    display: none;
+}
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+nav ul {
+    /* float: right; */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+}
+
+nav a {
+    color: #1983B6;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0 12px;
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: 0.5s all;
+    opacity: 1;
+}
+
+.menu li a:hover {
+    opacity: .71;
+    
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 26px;
+    background: #333;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 9;
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media(max-width: 1280px) {
+    nav a {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width : 991px) {
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    nav {
+        margin: 0;
+    }
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+    [id^=drop]:checked+ul {
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .toggle {
+        display: block;
+        padding: 8px 12px;
+        font-size: 14px;
+        text-decoration: none;
+        border: none;
+        float: right;
+        background-color: #fff;
+        color: #000;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: 0.5s all;
+       
+    }
+
+    .menu .toggle {
+        float: none;
+        text-align: center;
+        margin: auto;
+        max-width: 115px;
+        padding: 5px;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 2px;
+        background: transparent;
+        color: #1983B6;
+    }
+
+    .toggle:hover {
+        opacity: .8;
+        transition: 0.5s all;
+    }
+    nav ul {
+        float: right;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: transparent;
+    }
+
+  
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        display: none;
+    }
+    nav ul ul li a {
+        letter-spacing: 2px;
+    }
+
+    nav ul ul ul li {
+        position: static;
+    }
+
+    .menu li.active a,
+    .menu li a:hover {
+        color: #1983B6;
+        opacity: .8;
+    }
+
+    nav a {
+        font-size: 14px;
+        display: block;
+        margin: 8px 0;
+    }
+
+    a.reqe-button {
+        padding: 12px 20px;
+        font-size: 13px;
+        margin: 0 8px;
+    }
+    
+}
+
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+
+}
+.login-btn{
+    background: #1983B6;
+    color: #fff !important;
+}
+.sign-up-btn{
+    background: #24935A;
+    color: #fff !important;
+    border-color: #24935A !important;
+}
+.logo{
+    height: 100px;
+    width: auto;
+}

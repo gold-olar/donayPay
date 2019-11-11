@@ -1,0 +1,19 @@
+.board{
+    padding: 4%;
+    display: flex;
+}
+.dashboard-header{
+    color: #1983B6;
+    padding-left: 5%;
+    font-weight: 600;
+}
+.fa-plus-circle{
+    font-size: 560% !important;
+    margin: auto !important;
+    margin-top: 50% !important;
+    margin-bottom: 50% !important;
+    padding: auto !important;
+}
+.create-campagin{
+    color: #555;
+}
