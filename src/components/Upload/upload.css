@@ -1,53 +1,4 @@
-.input-file-container {
-    /* position: relative; */
-    width: 225px;
-    margin-left: 23% !important;
-  } 
-  .js .input-file-trigger {
-    display: block;
-    padding: 14px 45px;
-    background: #1983B6;
-    color: #fff;
-    font-size: 1em;
-    transition: all .4s;
-    cursor: pointer;
-    border-radius: 13px;
-    border: 1px solid transparent;
-    font-weight: 700;
 
-  }
-  .js .input-file {
-    margin-left: 10%;
-    /* width: 225px; */
-    opacity: 0;
-    padding: 14px 0;
-    cursor: pointer;
-  }
-  .js .input-file:hover + .input-file-trigger,
-  .js .input-file:focus + .input-file-trigger,
-  .js .input-file-trigger:hover,
-  .js .input-file-trigger:focus {
-    background: #fff;
-    color: #1983B6;
-    border: 1px solid #1983B6;
-  }
-  
-  .file-return {
-    margin: 0;
-  }
-  .file-return:not(:empty) {
-    margin: 1em 0;
-  }
-  .js .file-return {
-    font-style: italic;
-    font-size: .9em;
-    font-weight: bold;
-  }
-  .js .file-return:not(:empty):before {
-    content: "Selected file: ";
-    font-style: normal;
-    font-weight: normal;
-  }
   .upload-card{
       width:50%;
       margin:auto;
@@ -70,5 +21,30 @@
     height: 1px;
     background: #555;
     left: 31%;
-    bottom: -2%;
+    bottom: -35%;
+}
+.button_upload{
+    background: #1983B6;
+    color: #fff;
+    border-radius: 13px;
+    border: 1px solid transparent;
+}
+
+.remove-bg{
+    background: transparent !important;
+}
+.go-back-link{
+    cursor: pointer;
+    font-weight: 700;
+    color: #1983B6;
+}
+.go-back-link:hover{
+    cursor: pointer;
+    color: #000;
+    transition: all 0.3s;
+}
+.cc-btn{
+    width: 300px !important;
+    margin-left: 12%;
+
 }

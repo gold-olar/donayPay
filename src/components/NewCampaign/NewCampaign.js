@@ -1,11 +1,10 @@
 import React , { useContext } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import DashboardNav from '../DashboardNav/DashboardNav';
 import './newCampaign.css';
 import goldin from './goldin.jpg'
 import Footer from '../Footer/Footer';
 import { CampaignFormContext } from '../../contexts/campaignFormContext';
-import { FormContext } from '../../contexts/FormContext';
 import Loader from '../Loader/Loader';
 
 const NewCampaign = () => {

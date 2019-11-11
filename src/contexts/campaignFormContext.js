@@ -26,14 +26,18 @@ class CampaignFormContextProvider extends Component {
     onNextSubmit = (e) => {
         e.preventDefault();
         this.setState({ imageUpload : true, })
-        console.log(this.state.loading);
-
-       
-        // Fetch API here
-
-        console.log(this.state);
     }
 
+    goBack = () =>{
+        this.setState({
+            imageUpload: false,
+        })
+    }
+
+    onCreateCampaign = (e) => {
+        e.preventDefault();
+        console.log(this.state)
+    }
 
    
 
@@ -42,7 +46,8 @@ class CampaignFormContextProvider extends Component {
         return (
             <CampaignFormContext.Provider 
             value = {{ 
-                ...this.state, onNextSubmit: this.onNextSubmit, onChangeHandler :this.onChange,
+                ...this.state, onNextSubmit: this.onNextSubmit, onChangeHandler :this.onChange, goBack: this.goBack,
+                createCampaign : this.onCreateCampaign,
                 }}>
                 {this.props.children}
             </CampaignFormContext.Provider>
