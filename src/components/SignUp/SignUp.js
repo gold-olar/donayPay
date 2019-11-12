@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import './signup.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink , Redirect } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import { FormContext } from '../../contexts/FormContext';
 import Loader from '../Loader/Loader';
@@ -9,11 +9,15 @@ import Loader from '../Loader/Loader';
 
 
 const SignUp = () => {
-    const { firstName, lastName, email, password, confirmPassword, onChangeHandler, onSignUpFormSubmitHandler, comparePasswordHandler, message, loading, } = useContext(FormContext)
-
+    const { firstName, lastName, email, password, confirmPassword, onChangeHandler, onSignUpFormSubmitHandler, comparePasswordHandler, message, loading, auth } = useContext(FormContext)
+    let redirect = null;
+    if(auth){
+        redirect = <Redirect to = "/dashboard"/>
+    }
     return (
         <div>
        {loading ? <Loader/> : null}
+       {redirect}
                <div className="container-fluid p-5">
                <div className="row">
                    <div className="col col  animated fadeInLeft padding">
@@ -24,7 +28,7 @@ const SignUp = () => {
                    </div>
                    <div className="col-lg-6 col-md-6 col-sm-8 margin-scam  animated fadeInRight">
                        <div className="form-card shadow">
-                           {message ? <p className="error"> {message} </p> : null }
+                           {message ? <p className="error text-center red"> {message} </p> : null }
                            <form onSubmit= {onSignUpFormSubmitHandler} >
                                <div className="row form-row">
                                    <div className="col">

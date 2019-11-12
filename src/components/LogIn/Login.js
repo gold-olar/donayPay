@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import { FormContext } from '../../contexts/FormContext';
 import Loader from '../Loader/Loader';
@@ -8,10 +8,15 @@ import Loader from '../Loader/Loader';
 
 
 const Login = () => {
-    const {message, onLoginFormSubmitHandler, onChangeHandler, email, password, loading} = useContext(FormContext)
+    const {message, onLoginFormSubmitHandler, onChangeHandler, email, password, loading, auth} = useContext(FormContext)
 
+    let redirect = null;
+    if(auth){
+        redirect = <Redirect to = "/dashboard"/>
+    }
     return (
         <div>
+            {redirect}
               {loading ? <Loader/> : null}
             <div className="container-fluid p-5">
                 <div className="row margin-top">
