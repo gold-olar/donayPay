@@ -1,0 +1,17 @@
+.single-campaign-card{
+    /* border: 1px solid #555; */
+    margin-bottom: 5%;
+    width: 18rem;
+
+}
+.naira-n{
+    font-size: 170%;
+}
+.c-img{
+    height: 200px;
+    width: 100%;
+}
+.last-donay, .card-title, b{
+    color: #555;
+    
+}

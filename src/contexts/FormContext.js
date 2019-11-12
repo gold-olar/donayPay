@@ -123,6 +123,7 @@ class FormContextProvider extends Component {
             message: null, confirmPassword: null,
         });
         axios.defaults.headers.common['auth'] = null;
+        localStorage.setItem('token', null)
 
     }
  

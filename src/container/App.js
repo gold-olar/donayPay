@@ -13,6 +13,7 @@ import NewCampaign from '../components/NewCampaign/NewCampaign';
 import CampaignFormContextProvider from '../contexts/campaignFormContext';
 import UploadImage from '../components/Upload/Upload';
 import DashboardSingle from '../components/DashboardSingleCampaign/DashboardSingle';
+import AllCampaigns from '../components/AllCampaigns/AllCampaigns';
 
 class App extends Component {
   render() {
@@ -31,6 +32,8 @@ class App extends Component {
                 <Route path='/dashboard' exact component={Dashboard} />
                 <Route path ='/newCampaign' exact component={NewCampaign} />
                 <Route path ='/upload' exact component={UploadImage} />
+                <Route path = '/campaigns' exact component={AllCampaigns} />
+
                 <Route path = '/campaign/:id'  component={DashboardSingle} />
                 <Route path='*' exact component={NotFound} />
 
