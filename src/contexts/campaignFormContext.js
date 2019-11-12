@@ -70,11 +70,13 @@ class CampaignFormContextProvider extends Component {
             }
         } catch (error) {
             this.setState({
-                message: "there was an error thatg was caught",
+                message: "there was an error that was caught",
                 loading: false,
                 imageUpload: true,
 
             })
+            console.log(error);
+            
         }
 
         // console.log(this.state)

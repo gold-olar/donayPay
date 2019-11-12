@@ -107,6 +107,7 @@ class FormContextProvider extends Component {
                 token: token
             });
             localStorage.setItem('token', token);
+            console.log(token)
         } catch (error) {
             this.setState({
                 message: "Something terrible happned, Please Retry ",
