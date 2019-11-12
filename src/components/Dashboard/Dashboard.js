@@ -5,9 +5,11 @@ import DashboardCampaignCard from '../DashboardCampaignCard/DashboardCampaingCar
 import DashboardNav from '../DashboardNav/DashboardNav';
 import { NavLink , Redirect } from 'react-router-dom';
 import { FormContext } from '../../contexts/FormContext';
+import { CampaignFormContext } from '../../contexts/campaignFormContext';
 
 const Dashboard = () => {
     const { firstName, lastName, loading, auth } = useContext(FormContext)
+    const {message} = useContext(CampaignFormContext)
     let redirect = null;
     if(!auth){
         redirect = <Redirect to = "/login"/>
@@ -16,6 +18,7 @@ const Dashboard = () => {
         <div>
         {redirect}
             <DashboardNav />
+            {message ? <p className=" text-center "> {message} </p> : null }
             <div className="board animated slideInLeft ">
                 <DashboardCampaignCard />
                 <DashboardCampaignCard />
