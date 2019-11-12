@@ -16,6 +16,7 @@ import DashboardSingle from '../components/DashboardSingleCampaign/DashboardSing
 import AllCampaigns from '../components/AllCampaigns/AllCampaigns';
 import FullSingleCampaign from '../components/FullSingleCampaign/FullSingleCampaign';
 import Donate from '../components/Donate/Donate';
+import DonateContextProvider from '../contexts/donateContext';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
       <BrowserRouter>
         <FormContextProvider>
           <CampaignFormContextProvider>
+            <DonateContextProvider>
             <div className="App">
 
               <Switch>
@@ -46,6 +48,7 @@ class App extends Component {
               </Switch>
 
             </div>
+            </DonateContextProvider>
           </CampaignFormContextProvider>
         </FormContextProvider>
 
