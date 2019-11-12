@@ -17,8 +17,18 @@
 }
 .single-options-card{
     width: 50% !important;
-   padding: 2%;
+   padding: 3% 3% 2% 3%;
    margin-top: 3%; 
+   margin-left: 30%;
+   margin-right: 30%;
+}
+.each-option-{
+    padding: 3%;
+}
+.each-option-:hover{
+    background: #1983B6;
+    color: #fff;
+    transition: all 0.3s;
 }
 .status-and-progress{
     padding: 2%;
@@ -30,13 +40,72 @@
     display: block;
     font-size: 200%;
     font-weight: 700;
+    padding-bottom: 2%;
+    padding-left: 5%;
 }
 .status-change{
     color : #1983B6 !important;
     cursor: pointer;
+    font-weight: 600;
+    font-size: 90%;
+    padding-left: 5%;
+
 
 }
 .status-card-{
-    width: 70%;
+    width: 60% !important;
+    padding-bottom: 4%;
+    margin-left: 5%;
+    padding-top: 3%;
+    border: 2px solid #eee;
 
+}
+.icon-edit{
+    width: 50px;
+    display: block;
+    height: auto;
+    padding-bottom: 7%;
+    margin: auto;
+}
+.campaign-status-header{
+    color: #555;
+    font-size: 90%;
+    font-weight: 600;
+
+}
+.progress-{
+    font-size: 230%;
+    font-weight: 700;
+    padding-bottom: 2%;
+    padding-left: 3%;
+}
+.status-change-target{
+    margin-left: 30%;
+    font-size: 230%;
+    font-weight: 700;
+
+}
+.percent{
+    color: #555;
+    font-weight: 700;
+}
+.target{
+    line-height: 0.3;
+    font-size: 80%;
+    font-weight: 600;
+    color: #555;
+}
+.naira-sup{
+    font-weight: 400;
+    font-size: 50%;
+}
+progress{
+    width: 100% !important;
+    height: 3px !important;
+}
+thead{
+    border-top: none !important;
+}
+.margin-bottom{
+    margin-bottom: 5%;
 }

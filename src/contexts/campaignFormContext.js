@@ -1,8 +1,10 @@
-import React, { createContext, Component } from 'react';
-// import axios from 'axios';
+import React, { createContext, Component, useContext } from 'react';
+import axios from 'axios';
+import { FormContext } from './FormContext';
 
 
-export const CampaignFormContext= createContext()
+
+export const CampaignFormContext = createContext()
 
 
 class CampaignFormContextProvider extends Component {
@@ -13,7 +15,8 @@ class CampaignFormContextProvider extends Component {
         story: '',
         image: '',
         loading: false,
-        imageUpload : false,
+        imageUpload: false,
+        redirectToDashboard: false,
     }
     onChange = (e, identifier) => {
         this.setState({
@@ -26,26 +29,63 @@ class CampaignFormContextProvider extends Component {
 
     onNextSubmit = (e) => {
         e.preventDefault();
-        this.setState({ imageUpload : true, })
+        this.setState({ imageUpload: true, })
     }
 
-    goBack = () =>{
+    goBack = () => {
         this.setState({
             imageUpload: false,
         })
     }
 
-    onCreateCampaign = (e) => {
+    onCreateCampaign = async (e) => {
         e.preventDefault();
-        console.log(this.state)
+
+        this.setState({ loading: true })
+        const { story, image, forWho, goal, title, } = this.state;
+        let campaignDetails = {
+            description: story,
+            image,
+            beneficiary: forWho,
+            expected_amount: goal,
+            title,
+        }
+        try {
+            const createCampaign = await axios.post('/create/', campaignDetails, { headers: { Authorization: `token ${localStorage.getItem("token")}` }, });
+            console.log(createCampaign);
+            if (createCampaign.status === 200) {
+                this.setState({
+                    message: "created succesfully",
+                    loading: false,
+                    redirectToDashboard: true,
+                    imageUpload: false,
+                })
+            } else {
+                this.setState({
+                    message: "there was an error",
+                    loading: false,
+                    imageUpload: true,
+
+                })
+            }
+        } catch (error) {
+            this.setState({
+                message: "there was an error thatg was caught",
+                loading: false,
+                imageUpload: true,
+
+            })
+        }
+
+        // console.log(this.state)
     }
 
     render() {
         return (
-            <CampaignFormContext.Provider 
-            value = {{ 
-                ...this.state, onNextSubmit: this.onNextSubmit, onChangeHandler :this.onChange, goBack: this.goBack,
-                createCampaign : this.onCreateCampaign,
+            <CampaignFormContext.Provider
+                value={{
+                    ...this.state, onNextSubmit: this.onNextSubmit, onChangeHandler: this.onChange, goBack: this.goBack,
+                    createCampaign: this.onCreateCampaign,
                 }}>
                 {this.props.children}
             </CampaignFormContext.Provider>

@@ -14,7 +14,8 @@ class FormContextProvider extends Component {
         confirmPassword: '',
         message: '',
         loading: false,
-        auth: true,
+        auth: false,
+        token: '',
     }
     onChange = (e, identifier) => {
         this.setState({
@@ -55,17 +56,23 @@ class FormContextProvider extends Component {
                 if (login.status === 200) {
                     const { token } = login
                     console.log(token)
-                    axios.defaults.headers.common['auth'] = token;
+                    axios.defaults.headers.common['Authorization'] = `Token ${token}`;
                     this.setState({
                         loading: false,
                         auth: true,
+                        token: token,
                     })
+                    localStorage.setItem('token', token);
                 } else {
                     // I dont think this login can fail though ..
                 }
 
 
             } else {
+                this.state({
+                    loading: false,
+                    message: " Sorry, There was a problem signing up."
+                })
                 // Signing Up wasnt successful
             };
         } catch (error) {
@@ -93,11 +100,13 @@ class FormContextProvider extends Component {
                     loading: false,
                 })
             }
-            axios.defaults.headers.common['auth'] = token;
+            axios.defaults.headers.common['Authorization'] = `Token ${token}`;
             this.setState({
                 loading: false,
                 auth: true,
-            })
+                token: token
+            });
+            localStorage.setItem('token', token);
         } catch (error) {
             this.setState({
                 message: "Something terrible happned, Please Retry ",
