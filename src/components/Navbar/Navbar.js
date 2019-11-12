@@ -25,7 +25,7 @@ const Navbar = () => {
                             </label>
                             <input type="checkbox" id="drop" />
                             <ul className="menu">
-                                <li><NavLink to='/howitworks' className="nav-link text-uppercase"> how it works </NavLink></li>
+                                <li><NavLink to='/' className="nav-link text-uppercase"> Home </NavLink></li>
                                 <li><NavLink to='/campaigns' className="nav-link text-uppercase"> Campaigns</NavLink></li>
                                 <li><NavLink to='/contact' className="nav-link text-uppercase">Contact Us </NavLink></li>
 

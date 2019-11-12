@@ -53,7 +53,7 @@ class CampaignFormContextProvider extends Component {
         try {
             const createCampaign = await axios.post('/create/', campaignDetails, { headers: { Authorization: `token ${localStorage.getItem("token")}` }, });
             console.log(createCampaign);
-            if (createCampaign.status === 200) {
+            if (createCampaign.status === 201) {
                 this.setState({
                     message: "created succesfully",
                     loading: false,
@@ -76,7 +76,7 @@ class CampaignFormContextProvider extends Component {
 
             })
             console.log(error);
-            
+
         }
 
         // console.log(this.state)

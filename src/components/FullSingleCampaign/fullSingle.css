@@ -1,0 +1,12 @@
+.font-weight{
+    font-weight: 700 ;
+    display: block;
+}
+.fullSingle-img{
+    height: 300px;
+    width: 100%;
+}
+.color-green{
+    background: green;
+    color: #fff !important;
+ }
