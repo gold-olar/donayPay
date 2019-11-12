@@ -2,13 +2,22 @@ import React, { useContext } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { DonateContext } from '../../contexts/donateContext';
 import Loader from '../Loader/Loader';
+import {Redirect} from "react-router-dom";
 
+  
 const Donate = (props) => {
-    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, passId, loading,amount} = useContext(DonateContext);
+
+    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, passId, loading,amount, OTP} = useContext(DonateContext);
+
+    let redirect = null;
+   if(OTP){
+       redirect = <Redirect to = "/otp/1"/>
+   }
     return (
         <div>
               {loading ? <Loader/> : null}
             <Navbar />
+            {redirect}
 
             <div className="container-fluid">
                 <div className="row">
@@ -65,7 +74,7 @@ const Donate = (props) => {
                                               onChange={(e) => onChange(e, "pin")} value={pin} class="form-control" placeholder="PIN" />
                                         </div>
                                         <div class="form-group col-md-2">
-                                            <input type="text"
+                                            <input type="password"
                                               onLoad={(e) => onChange(e, "id" )} value={props.match.params.id} class="form-control" disabled placeholder="PIN" />
                                         </div>
                                         </div>

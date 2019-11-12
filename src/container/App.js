@@ -17,6 +17,7 @@ import AllCampaigns from '../components/AllCampaigns/AllCampaigns';
 import FullSingleCampaign from '../components/FullSingleCampaign/FullSingleCampaign';
 import Donate from '../components/Donate/Donate';
 import DonateContextProvider from '../contexts/donateContext';
+import Otp from '../components/OTP/otp';
 
 class App extends Component {
   render() {
@@ -39,6 +40,8 @@ class App extends Component {
                 <Route path = '/campaigns' exact component={AllCampaigns} />
                 <Route path = '/singleCampaign/:id' exact component={FullSingleCampaign} />
                 <Route path = '/donate/:id' exact component={Donate} />
+                <Route path = '/otp/:id' component={Otp} />
+
 
 
 
