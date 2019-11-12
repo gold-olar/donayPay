@@ -1,0 +1,42 @@
+.current-balance{
+    border-radius: 13px;
+    color: #fff;
+    background: #1983B6;
+    font-weight: 600;
+    width: 200px;
+    padding: 1%;
+}
+.cb-head{
+    display: block;
+    font-size: 120%;
+    padding-bottom: 5%;
+}
+.cb-balance{
+    text-align: center;
+    margin: auto;
+}
+.single-options-card{
+    width: 50% !important;
+   padding: 2%;
+   margin-top: 3%; 
+}
+.status-and-progress{
+    padding: 2%;
+    margin-top: 5%; 
+    margin:auto;
+}
+
+.status-{
+    display: block;
+    font-size: 200%;
+    font-weight: 700;
+}
+.status-change{
+    color : #1983B6 !important;
+    cursor: pointer;
+
+}
+.status-card-{
+    width: 70%;
+
+}
