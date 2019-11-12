@@ -8,6 +8,7 @@ export const CampaignFormContext= createContext()
 class CampaignFormContextProvider extends Component {
     state = {
         goal: '',
+        title: '',
         forWho: '',
         story: '',
         image: '',
@@ -38,9 +39,6 @@ class CampaignFormContextProvider extends Component {
         e.preventDefault();
         console.log(this.state)
     }
-
-   
-
 
     render() {
         return (

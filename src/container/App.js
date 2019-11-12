@@ -30,6 +30,7 @@ class App extends Component {
                 <Route path='/dashboard' exact component={Dashboard} />
                 <Route path ='/newCampaign' exact component={NewCampaign} />
                 <Route path ='/upload' exact component={UploadImage} />
+                <Route path = '/campaign/:id' exact component={} />
                 <Route path='*' exact component={NotFound} />
 
               </Switch>

@@ -15,7 +15,7 @@ const DashboardCampaignCard = () => {
                                 <h5 className="card-title">Help Me fundraise for my mums school</h5>
                                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.....</p>
                                 <hr/>
-                                <NavLink className="editLink text-center" to ="edit"> Edit </NavLink>
+                                <NavLink className="editLink text-center" to ="/campaign/id"> View Details </NavLink>
                                 <span className="card-icon float-right"> <i className="fas fa-pen-square"></i> </span>
                                 <span className="card-icon float-right"> <i className="fas fa-trash"></i></span>
                                 

@@ -1,11 +1,14 @@
-import React from 'react';
+import React , {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import logo from './logo.jpg'
+import { FormContext } from '../../contexts/FormContext';
 
 
 
 const Navbar = () => {
+    const {auth} = useState(FormContext)
+
     return (
         <header id="home">
             <div className="container-fluid">
@@ -26,11 +29,16 @@ const Navbar = () => {
                                 <li><NavLink to='/campaigns' className="nav-link text-uppercase"> Campaigns</NavLink></li>
                                 <li><NavLink to='/contact' className="nav-link text-uppercase">Contact Us </NavLink></li>
 
+                            { !auth ?
 
                                 <li className="ml-xl-5 ml-lg-2 mt-lg-0 mt-sm-4 mt-3">
                                 <NavLink to='/login' className="reqe-button text-uppercase login-btn">Log in </NavLink>
                                 <NavLink to='/signup' className="reqe-button text-uppercase signup-btn">Sign Up </NavLink>
                                 </li>
+                                :
+                                <NavLink to='/' className="reqe-button text-uppercase login-btn">Log Out </NavLink>
+
+                            }
                             </ul>
                         </nav>
                     </div>

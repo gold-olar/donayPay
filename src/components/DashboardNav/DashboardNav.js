@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {NavLink} from 'react-router-dom';
 import logo from '../Navbar/logo.jpg'
+import { FormContext } from '../../contexts/FormContext';
 
 const DashboardNav = () => {
+    const {logOut} = useContext(FormContext);
+    
     return ( 
         <div>
             <div className="container-fluid">
@@ -21,7 +24,7 @@ const DashboardNav = () => {
                             <ul className="menu">
                                 <li><NavLink to='/' className="nav-link text-uppercase">Home </NavLink></li>
                                 <li><NavLink to='/' className="nav-link text-uppercase"> Profile</NavLink></li>
-                                <li><NavLink to='/logout' className="nav-link text-uppercase">Log Out </NavLink></li>
+                                <li><NavLink to='/' onClick={logOut} className="nav-link text-uppercase">Log Out </NavLink></li>
 
 
                               

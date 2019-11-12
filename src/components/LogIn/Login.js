@@ -29,7 +29,7 @@ const Login = () => {
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-8 margin-scam  animated fadeInRight">
                         <div className="form-card shadow">
-                            {message ? <p> {message} </p> : null }
+                            {message ? <p className="error text-center" > {message} </p> : null }
                             <form onSubmit= {onLoginFormSubmitHandler}>
                                 
                                 <div className="row form-row">

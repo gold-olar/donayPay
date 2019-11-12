@@ -8,7 +8,7 @@ import { CampaignFormContext } from '../../contexts/campaignFormContext';
 import Loader from '../Loader/Loader';
 
 const NewCampaign = () => {
-   const { goal, onChangeHandler, forWho, story, onNextSubmit, loading, imageUpload } =  useContext(CampaignFormContext);
+   const { goal, onChangeHandler, forWho, story, onNextSubmit, loading, imageUpload, title} =  useContext(CampaignFormContext);
 
    let redirect = null;
    if(imageUpload){
@@ -24,6 +24,14 @@ const NewCampaign = () => {
                     <div className="col-md-8">
                         <div className="newCampaign-card animated slideInLeft shadow">
                             <form onSubmit ={onNextSubmit}>
+                            <div className="row form-row">
+                                    <div className="col">
+                                        <input type="text" 
+                                         onChange={(e) => onChangeHandler(e, "title")} value={title}  
+                                        className="form-control" required placeholder="Title"/>
+                                    </div>
+                                </div>
+                                <br/>
                                 <div className="row form-row">
                                     <div className="col">
                                         <h3 className="form-heading-" > Enter your goal here ?</h3>
@@ -36,14 +44,16 @@ const NewCampaign = () => {
                                     </div>
                                     <div className="col">
                                         <h3 className="form-heading-" >  Who are you raising funds for ?</h3>
-                                        <select 
-                                        onChange={(e) => onChangeHandler(e, "forWho")} value={forWho}
-                                        className="form-control" name="forWho">
-                                            <option value="" default> -- </option>
-                                            <option value="self" default> Myself or Someone else </option>
-                                            <option value="organisation" default> Non Profit or Organisation </option>
+                                        <div className="form-group">
+                                            <select className="form-control"
+                                            onChange={(e) => onChangeHandler(e, "forWho")} value={forWho}
+                                            className="form-control" name="forWho">
+                                                <option value="" default> -- </option>
+                                                <option value="self" default> Myself or Someone else </option>
+                                                <option value="organisation" default> Non Profit or Organisation </option>
 
-                                        </select>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="row form-row">

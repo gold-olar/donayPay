@@ -14,6 +14,7 @@ class FormContextProvider extends Component {
         confirmPassword: '',
         message: '',
         loading: false,
+        auth: true,
     }
     onChange = (e, identifier) => {
         this.setState({
@@ -43,7 +44,6 @@ class FormContextProvider extends Component {
             last_name: lastName,
             email,
             password,
-            auth: false,
         }
         try {
             const signUp = await axios.post('/account/register/', userDetails);
@@ -99,9 +99,25 @@ class FormContextProvider extends Component {
                 auth: true,
             })
         } catch (error) {
+            this.setState({
+                message: "Something terrible happned, Please Retry ",
+                loading: false,
+            })
             console.log(error)
         }
     }
+
+    logOut = () => {
+        this.setState({
+            auth: false,
+            firstName: null, lastName: null, email: null,
+            message: null, confirmPassword: null,
+        });
+        axios.defaults.headers.common['auth'] = null;
+
+    }
+ 
+ 
 
 
     render() {
@@ -109,7 +125,7 @@ class FormContextProvider extends Component {
             <FormContext.Provider
                 value={{
                     ...this.state, onChangeHandler: this.onChange, onSignUpFormSubmitHandler: this.onSignUpSubmit, comparePasswordHandler: this.comparePassword,
-                    onLoginFormSubmitHandler: this.onLoginSubmit, loading: this.state.loading,
+                    onLoginFormSubmitHandler: this.onLoginSubmit, loading: this.state.loading, logOut : this.logOut,
                 }}>
                 {this.props.children}
             </FormContext.Provider>
