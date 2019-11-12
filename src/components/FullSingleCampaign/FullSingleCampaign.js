@@ -71,7 +71,7 @@ class FullSingleCampaign extends Component {
                                             <h5 class="card-title"> <span className="naira-n"> ₦ </span> <b> {this.state.campaign.reached_amount} </b> <span className="grey"> raised of </span> <span className="goal--">{this.state.campaign.expected_amount}</span></h5>
                                         </div>
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item">< progress max="100" value="50"></progress> </li>
+                                            <li class="list-group-item">< progress max="100" value="2"></progress> </li>
                                             <li class="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 5,000 </b> </span>  <span className="ml-4"> 1 hr ago</span> </li>
                                             <li class="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 1,000 </b> </span>  <span className="ml-4"> 5 days ago</span> </li>
                                             <li class="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 45,000 </b> </span>  <span className="ml-4"> 7 days ago</span> </li>
