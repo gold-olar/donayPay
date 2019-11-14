@@ -1,6 +1,5 @@
-import React, { createContext, Component, useContext } from 'react';
+import React, { createContext, Component } from 'react';
 import axios from 'axios';
-import { FormContext } from './FormContext';
 
 
 
@@ -23,9 +22,13 @@ class CampaignFormContextProvider extends Component {
             [identifier]: e.target.value,
             message: null
         });
-        console.log(this.state)
-        // console.log(this.props)
     };
+
+    handleImageChange = (e) => {
+        this.setState({
+          image: e.target.files[0]
+        })
+      };
 
     onNextSubmit = (e) => {
         e.preventDefault();
@@ -40,18 +43,24 @@ class CampaignFormContextProvider extends Component {
 
     onCreateCampaign = async (e) => {
         e.preventDefault();
-
-        this.setState({ loading: true })
+        this.setState({ loading: true });
+        
         const { story, image, forWho, goal, title, } = this.state;
-        let campaignDetails = {
-            description: story,
-            image,
-            beneficiary: forWho,
-            expected_amount: goal,
-            title,
-        }
+        
+        let formData = new FormData()
+        formData.append('title', title);
+        formData.append('image', image, image.name);
+        formData.append('description', story);
+        formData.append('beneficiary', forWho);
+        formData.append("expected_amount", goal);
+        console.log(this.state)
+
+        console.log("FORM DATA BEGINS", formData.values(), 'FORM DATA ENDS');
         try {
-            const createCampaign = await axios.post('/create/', campaignDetails, { headers: { Authorization: `token ${localStorage.getItem("token")}` }, });
+            const createCampaign = await axios.post('/create/', formData, { 
+                headers: { Authorization: `token ${localStorage.getItem("token")}` },
+                'content-type': 'multipart/form-data'
+         });
             console.log(createCampaign);
             if (createCampaign.status === 201) {
                 this.setState({
@@ -87,7 +96,7 @@ class CampaignFormContextProvider extends Component {
             <CampaignFormContext.Provider
                 value={{
                     ...this.state, onNextSubmit: this.onNextSubmit, onChangeHandler: this.onChange, goBack: this.goBack,
-                    createCampaign: this.onCreateCampaign,
+                    createCampaign: this.onCreateCampaign, handleImageChange : this.handleImageChange,
                 }}>
                 {this.props.children}
             </CampaignFormContext.Provider>

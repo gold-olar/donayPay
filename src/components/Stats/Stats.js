@@ -11,32 +11,32 @@ const Stats = () => {
             <div className="container-fluid">
                 <div className="row ">
                     <div className="col">
-                    <p className="wow animated fadeInLeft ">
-                            <p> <h4 className=" stats-count"> 1,230 </h4></p>
-                            <p className="stats-label text-uppercase"> popularity</p>
-                        </p>
+                    <span className="wow animated fadeInLeft ">
+                    <span className=" stats-count"> <p> 1,230 </p> </span>
+                            <span className="stats-label text-uppercase"> popularity</span>
+                        </span>
 
                     </div>
                     <div className="col">
-                        <p className="wow animated fadeInLeft ">
-                            <p> <h4 className="stats-count "> 300 </h4></p>
-                            <p className="stats-label text-uppercase"> campaigns</p>
-                        </p>
+                        <span className="wow animated fadeInLeft ">
+                        <span className="stats-count ">  <p>  300 </p></span>
+                            <span className="stats-label text-uppercase"> campaigns</span>
+                        </span>
 
                     </div>
                     
                     <div className="col">
-                    <p className="wow animated fadeInRight">
-                            <p> <h4 className="stats-count "> 120 </h4></p>
-                            <p className="stats-label text-uppercase"> fully funded</p>
-                        </p>
+                    <span className="wow animated fadeInRight">
+                    <span className="stats-count "> <p> 120 </p> </span>
+                            <span className="stats-label text-uppercase"> fully funded</span>
+                        </span>
 
                     </div>
                     <div className="col">
-                    <p className="wow animated fadeInRight">
-                            <p> <h4 className=" wow stats-count animated fadeInRight"> 737 </h4></p>
-                            <p className="stats-label text-uppercase"> donors</p>
-                        </p>
+                    <span className="wow animated fadeInRight">
+                    <span className="stats-count ">   <p>  737 </p> </span>
+                            <span className="stats-label text-uppercase"> donors</span>
+                        </span>
 
                     </div>
 
@@ -55,7 +55,7 @@ const Stats = () => {
                     </div>
                     <div  className="wow animated fadeInRight col">
                       <h6 className="text-uppercase available" >Available Now </h6>
-                      <h4 className="header-donay"> The DonayPay App</h4>
+                      <span className="header-donay"> The DonayPay App</span>
                       <p className="app-talk"> 
                       Start and manage campaigns, engage with supporters, and discover important causes — all on the go
                       </p>

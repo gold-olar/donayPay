@@ -1,6 +1,5 @@
 import React, { createContext, Component } from 'react';
 import axios from 'axios';
-import uuid from 'uuid';
 
 
 export const DonateContext = createContext()
@@ -44,7 +43,6 @@ class DonateContextProvider extends Component {
         if (verified) {
             this.setState({
             backhome : true
-
             })
         }
         

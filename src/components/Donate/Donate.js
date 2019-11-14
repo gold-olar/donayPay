@@ -7,7 +7,7 @@ import {Redirect} from "react-router-dom";
   
 const Donate = (props) => {
 
-    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, passId, loading,amount, OTP} = useContext(DonateContext);
+    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, loading,amount, OTP} = useContext(DonateContext);
 
     let redirect = null;
    if(OTP){

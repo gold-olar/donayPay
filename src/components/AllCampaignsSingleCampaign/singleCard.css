@@ -1,7 +1,15 @@
 .single-campaign-card{
-    /* border: 1px solid #555; */
+    border: 1px solid rgba(85, 85, 85, 0.476);
     margin-bottom: 5%;
-    width: 18rem;
+    width: 19rem;
+    height: 400px !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.single-campaign-card:hover{
+    border: 1px solid #555;
+    transition: all 0.3s;
 
 }
 .naira-n{
@@ -11,7 +19,25 @@
     height: 200px;
     width: 100%;
 }
-.last-donay, .card-title, b, .grey{
+.last-donay, .card-title, b, .grey, .goal--{
     color: #555;
-    
+}
+.goal--{
+    font-weight: 500;
+}
+.last-donay, .raised--{
+    font-size: 70%;
+}
+.story-p{
+    height: 20px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #555;
+}
+.description-st{
+    font-weight: 700;
+    font-size: 90%;
+}
+.all-c_header{
+    font-weight: 800;
 }

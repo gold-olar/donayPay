@@ -18,6 +18,9 @@ import FullSingleCampaign from '../components/FullSingleCampaign/FullSingleCampa
 import Donate from '../components/Donate/Donate';
 import DonateContextProvider from '../contexts/donateContext';
 import Otp from '../components/OTP/otp';
+import AllCampaignsContextProvider from '../contexts/allCampaignsContext';
+
+
 
 class App extends Component {
   render() {
@@ -27,30 +30,24 @@ class App extends Component {
         <FormContextProvider>
           <CampaignFormContextProvider>
             <DonateContextProvider>
-            <div className="App">
-
-              <Switch>
-
-                <Route path='/' exact component={IndexPage} />
-                <Route path='/signup' exact component={SignUp} />
-                <Route path='/login' exact component={Login} />
-                <Route path='/dashboard' exact component={Dashboard} />
-                <Route path ='/newCampaign' exact component={NewCampaign} />
-                <Route path ='/upload' exact component={UploadImage} />
-                <Route path = '/campaigns' exact component={AllCampaigns} />
-                <Route path = '/singleCampaign/:id' exact component={FullSingleCampaign} />
-                <Route path = '/donate/:id' exact component={Donate} />
-                <Route path = '/otp/:id' component={Otp} />
-
-
-
-
-                <Route path = '/campaign/:id'  component={DashboardSingle} />
-                <Route path='*' exact component={NotFound} />
-
-              </Switch>
-
-            </div>
+              <AllCampaignsContextProvider>
+                <div className="App">
+                  <Switch>
+                    <Route path='/' exact component={IndexPage} />
+                    <Route path='/signup' exact component={SignUp} />
+                    <Route path='/login' exact component={Login} />
+                    <Route path='/dashboard' exact component={Dashboard} />
+                    <Route path ='/newCampaign' exact component={NewCampaign} />
+                    <Route path ='/upload' exact component={UploadImage} />
+                    <Route path = '/campaigns' exact component={AllCampaigns} />
+                    <Route path = '/singleCampaign/:id' exact component={FullSingleCampaign} />
+                    <Route path = '/donate/:id' exact component={Donate} />
+                    <Route path = '/otp/:id' component={Otp} />
+                    <Route path = '/campaign/:id'  component={DashboardSingle} />
+                    <Route path='*' exact component={NotFound} />
+                  </Switch>
+                </div>
+              </AllCampaignsContextProvider>
             </DonateContextProvider>
           </CampaignFormContextProvider>
         </FormContextProvider>

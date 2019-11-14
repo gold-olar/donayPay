@@ -47,7 +47,7 @@ const NewCampaign = () => {
                                         <div className="form-group">
                                             <select className="form-control"
                                             onChange={(e) => onChangeHandler(e, "forWho")} value={forWho}
-                                            className="form-control" name="forWho">
+                                             name="forWho">
                                                 <option value="" default> -- </option>
                                                 <option value="self" default> Myself or Someone else </option>
                                                 <option value="organisation" default> Non Profit or Organisation </option>
