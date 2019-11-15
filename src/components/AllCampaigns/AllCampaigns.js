@@ -25,7 +25,6 @@ const AllCampaigns = () => {
                                         <SingleCampaign key={singleCampaign.id} image={singleCampaign.image} title={singleCampaign.title} story={singleCampaign.description}
                                             id={singleCampaign.id} goal={singleCampaign.expected_amount} reached={singleCampaign.reached_amount}
                                             percentage={singleCampaign.percentage}
-
                                         />
                                     </div>
                                 )
@@ -34,7 +33,7 @@ const AllCampaigns = () => {
                     </div>
                 </div>
                 :
-                <div> Fetching Campaigns... </div>
+                <div> <h1 className="text-center p-4">  Fetching Campaigns... </h1> </div>
             }
             <Footer />
         </div>

@@ -13,3 +13,17 @@
  .card---{
     width: 100%
  }
+ .fullSingleCard{
+     width: 80%;
+     margin: auto;
+ }
+ .white-c{
+     color: #fff;
+     font-weight: 600;
+ }
+ .transpa{
+     background: none;
+ }
+ .donay-btn{
+     width: 100%;
+ }

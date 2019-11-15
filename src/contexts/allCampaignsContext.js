@@ -29,6 +29,8 @@ class AllCampaignsContextProvider extends Component {
         console.log(allCampaigns.data)
     };
 
+  
+
     componentDidMount(){
         this.fetchAllCampaigns();
     }
@@ -36,7 +38,7 @@ class AllCampaignsContextProvider extends Component {
     render() {
         return (
             <AllCampaignsContext.Provider
-                value={{...this.state,}}>
+                value={{...this.state, getSingle: this.getSingle,}}>
                 {this.props.children}
             </AllCampaignsContext.Provider>
         );

@@ -11,32 +11,33 @@ const Stats = () => {
             <div className="container-fluid">
                 <div className="row ">
                     <div className="col">
-                    <span className="wow animated fadeInLeft ">
+                    <div className="wow animated fadeInLeft text-center ">
                     <span className=" stats-count"> <p> 1,230 </p> </span>
                             <span className="stats-label text-uppercase"> popularity</span>
-                        </span>
+                        </div>
 
                     </div>
                     <div className="col">
-                        <span className="wow animated fadeInLeft ">
+                        <div className="wow animated fadeInLeft text-center ">
                         <span className="stats-count ">  <p>  300 </p></span>
                             <span className="stats-label text-uppercase"> campaigns</span>
-                        </span>
+                        </div>
 
                     </div>
                     
                     <div className="col">
-                    <span className="wow animated fadeInRight">
+                    <div className="wow animated fadeInRight text-center">
                     <span className="stats-count "> <p> 120 </p> </span>
                             <span className="stats-label text-uppercase"> fully funded</span>
-                        </span>
+                        </div>
 
                     </div>
                     <div className="col">
-                    <span className="wow animated fadeInRight">
+                    <div className="wow animated fadeInRight text-center">
+
                     <span className="stats-count ">   <p>  737 </p> </span>
-                            <span className="stats-label text-uppercase"> donors</span>
-                        </span>
+                            <span className="stats-label  text-uppercase"> donations </span>
+                        </div>
 
                     </div>
 
