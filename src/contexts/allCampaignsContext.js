@@ -26,7 +26,7 @@ class AllCampaignsContextProvider extends Component {
                 message: "No Campaigns Yet"
             });
         };
-        console.log(allCampaigns.data)
+        // console.log(allCampaigns.data)
     };
 
   

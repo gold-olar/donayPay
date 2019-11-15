@@ -62,6 +62,7 @@ const FullSingleCampaign = (props) => {
                                             <li className="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 5,000 </b> </span>  <span className="ml-4"> 1 hr ago</span> </li>
                                             <li className="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 1,000 </b> </span>  <span className="ml-4"> 5 days ago</span> </li>
                                             <li className="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 45,000 </b> </span>  <span className="ml-4"> 7 days ago</span> </li>
+                                            <li className="list-group-item text-center ">   <NavLink to={`/share/${x.id}`} className="card-link btn btn-secondary donay-btn   pl-4">SHARE </NavLink></li>
                                             <li className="list-group-item text-center ">   <NavLink to={`/donate/${x.id}`} className="card-link btn btn-success donay-btn   pl-4">DONATE </NavLink></li>
                                         </ul>
 

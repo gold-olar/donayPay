@@ -1,0 +1,12 @@
+.main-card-for-payment{
+    width: 70%  !important;
+    margin: auto;
+    /* padding: 3%; */
+    border-radius: 13px !important;
+}
+.grey-bg{
+    background: #1983B6 !important;
+    padding: 5%;
+    border-radius: 0px  13px 13px 0px;
+    margin-right: -20px;
+}

@@ -1,105 +1,118 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { DonateContext } from '../../contexts/donateContext';
 import Loader from '../Loader/Loader';
-import {Redirect} from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import SingleCampaign from '../AllCampaignsSingleCampaign/SingleCampaign';
+import './donate.css';
+import Footer from '../Footer/Footer';
 
-  
 const Donate = (props) => {
 
-    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, loading,amount, OTP} = useContext(DonateContext);
+    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, loading, amount, OTP, passId } = useContext(DonateContext);
+    
+    let {id} = props.match.params;
+    useEffect(()=>{
+        passId(id)
+    }, [id])
 
     let redirect = null;
-   if(OTP){
-       redirect = <Redirect to = "/otp/1"/>
-   }
+    if (OTP) {
+        redirect = <Redirect to= {`/opt/${id}`} />
+    }
     return (
         <div>
-              {loading ? <Loader/> : null}
+            {loading ? <Loader /> : null}
             <Navbar />
             {redirect}
+            <div className="container">
+                <div className="row p-4">
+                    <div className="col main-card-for-payment shadow animated fadeInRight">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col">
+                                    <form className ="p-4" onSubmit={submit}>
+                                        <div className="row">
+                                            <div className="col">
+                                                <input type="text"
+                                                 onChange = {(e) => onChange(e, "firstName")} value ={ firstName }
+                                                 required className="form-control" placeholder="First name" />
+                                            </div>
+                                            <div className="col">
+                                                <input type="text" 
+                                                 onChange = {(e) => onChange(e, "lastName")} value ={ lastName }
+                                                required className="form-control" placeholder="Last name" />
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div className="row">
+                                            <div className="col">
+                                                <input type="text" 
+                                                 onChange = {(e) => onChange(e, "cardNumber")} value ={ cardNumber }
 
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-md-8 m-auto">
-                        <div class="card--- card shadow animated fadeInLeft p-4" >
-                            <div class="card-body">
-                                <form onSubmit = {submit}>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-3">
-                                            <input type="text" class="form-control" 
-                                             onChange={(e) => onChange(e, "firstName")} value={firstName}
-                                             placeholder="Firstname" />
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <input type="text" class="form-control" 
-                                             onChange={(e) => onChange(e, "lastName")} value={lastName}
-                                             placeholder="Lastname" />
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <input type="email" class="form-control" 
-                                              onChange={(e) => onChange(e, "email")} value={email}
-                                             placeholder="Email" />
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <input type="number" class="form-control" 
-                                              onChange={(e) => onChange(e, "amount")} value={amount}
-                                             placeholder="Amount" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" 
-                                          onChange={(e) => onChange(e, "cardNumber")} value={cardNumber}
-                                        class="form-control" id="inputAddress" placeholder="1234   2525     3535    3636 " />
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-2">
-                                            <input type="text"
-                                              onChange={(e) => onChange(e, "mm")} value={mm}
-                                               class="form-control" placeholder="MM" />
-                                        </div>
-                                        <div class="form-group col-md-2">
+                                                required className="form-control" placeholder="Card Number" />
+                                            </div>
+                                            <div className="col">
+                                                <input type="email" 
+                                                 onChange = {(e) => onChange(e, "email")} value ={ email }
 
-                                            <input type="text" 
-                                              onChange={(e) => onChange(e, "yy")} value={yy}
-                                            class="form-control" placeholder="YY" />
+                                                required className="form-control" placeholder="Email" />
+                                            </div>
                                         </div>
+                                        <br></br>
+                                        <div className="row">
+                                            <div className="col">
+                                                <input type="text" 
+                                                 onChange = {(e) => onChange(e, "amount")} value ={ amount }
+                                                required className="form-control" placeholder="Amount" />
+                                            </div>
+                                            <div className="col">
+                                                <input type="text"
+                                                 onChange = {(e) => onChange(e, "pin")} value ={ pin }
+                                                required className="form-control" placeholder="PIN" />
+                                            </div>
+                                            
+                                        </div>
+                                        <br/>
+                                    <div className="row">
+                                            <div className="col">
+                                                <input type="text" 
+                                                 onChange = {(e) => onChange(e, "mm")} value ={ mm }
 
-                                        <div class="form-group col-md-2">
-                                            <input type="text"
-                                              onChange={(e) => onChange(e, "cvv")} value={cvv} class="form-control" placeholder="CVV" />
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <input type="text"
-                                              onChange={(e) => onChange(e, "pin")} value={pin} class="form-control" placeholder="PIN" />
-                                        </div>
-                                        <div class="form-group col-md-2">
-                                            <input type="password"
-                                              onLoad={(e) => onChange(e, "id" )} value={props.match.params.id} class="form-control" disabled placeholder="PIN" />
-                                        </div>
-                                        </div>
+                                                 required className="form-control" placeholder="MM" />
+                                            </div>
+                                            <div className="col">
+                                                <input type="text" 
+                                                 onChange = {(e) => onChange(e, "yy")} value ={ yy }
 
-                                    <button type="submit" class="btn btn-primary">DONATE</button>
-                                </form>
+                                                required className="form-control" placeholder="YY" />
+                                            </div>
+                                            <div className="col">
+                                                <input type="text" required
+                                                 onChange = {(e) => onChange(e, "cvv")} value ={ cvv }
+
+                                                className="form-control" placeholder="CVV" />
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <button type="submit" className="reqe-button text-uppercase login-btn text-center sign-up-page">DONATE</button>
+                                        
+                                    </form>
+
+
+
+                                </div>
+                                <div className="col grey-bg ">
+                                    {/* <SingleCampaign/> */}
+
+                                </div>
                             </div>
                         </div>
-
-
                     </div>
-                    {/* <div className="col-md-2"> */}
-                        {/* <div class="card--- card shadow" >
-                            <img src="..." class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div> */}
-
-                    {/* </div> */}
                 </div>
             </div>
-
+        <br/>
+            <Footer/>
         </div>
     );
 }
