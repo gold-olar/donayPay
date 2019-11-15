@@ -22,7 +22,7 @@ class DonateContextProvider extends Component {
             amount: '',
             OTP: false,
             otp: '',
-
+            message: '',
         }
     }
     onChange = (e, identifier) => {
@@ -50,8 +50,10 @@ class DonateContextProvider extends Component {
 
     }
 
-    submit = async (e) => {
+    submit = async (e, id) => {
         e.preventDefault();
+        // let new_id = e.target[0].value;
+        console.log(id)
         this.setState({ loading: true, })
         let { cardNumber, pin, cvv, mm, yy, amount, email, firstName, lastName } = this.state;
         const paymentDetails = {
@@ -65,37 +67,28 @@ class DonateContextProvider extends Component {
             sugested_auth: "",
             txRef: nanoid(3),
             firstname: firstName,
-            lastname: lastName
+            lastname: lastName,
+            id: id
         }
-        const donated = await axios.post('/1/pay/', paymentDetails)
-        console.log(donated)
-        if (donated) { this.setState({ loading: false, }) }
-        if (donated) {
-            this.setState({
-                OTP: true,
-                ref: donated.data.flwRef,
-            })
-            console.log(donated.data.flwRef, "ref")
+        try {
+            const donated = await axios.post(`/${id}/pay/`, paymentDetails)
+            console.log(donated)
+            if (donated.data) {
+                this.setState({
+                    loading: false,
+                    OTP: true,
+                    ref: donated.data.flwRef,
+                })
+                console.log(donated.data.flwRef, "ref")
 
-        }
-        console.log(donated.data)
-    }
-
-    passId = (id) => {
-        if (parseInt(this.state.id) === parseInt(id)) {
-            return console.log('Same Id')
-        } else {
-            this.setState({ id })
-            console.log(this.state.id)
-            console.log(id)
-
+            }
+            console.log(donated.data)
+        } catch (error) {
+           this.setState({loading: false, message: "Unable to complete payment" });
+           console.log(error);
         }
     }
 
-    componentDidMount() {
-        // console.log(this.state)
-
-    }
 
     render() {
         return (

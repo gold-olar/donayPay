@@ -10,3 +10,14 @@
     border-radius: 0px  13px 13px 0px;
     margin-right: -20px;
 }
+.hide-id{
+    display: none !important;
+}
+.donate-img{
+    width: 400px;
+    height: auto;
+    margin: auto;
+}
+.tahnks{
+    color: #fff;
+}

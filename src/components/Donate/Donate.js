@@ -5,20 +5,18 @@ import Loader from '../Loader/Loader';
 import { Redirect } from "react-router-dom";
 import SingleCampaign from '../AllCampaignsSingleCampaign/SingleCampaign';
 import './donate.css';
+import donate from './donate.svg'
 import Footer from '../Footer/Footer';
 
 const Donate = (props) => {
 
-    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, loading, amount, OTP, passId } = useContext(DonateContext);
-    
+    const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, loading, amount, OTP, message } = useContext(DonateContext);
     let {id} = props.match.params;
-    useEffect(()=>{
-        passId(id)
-    }, [id])
+
 
     let redirect = null;
     if (OTP) {
-        redirect = <Redirect to= {`/opt/${id}`} />
+        redirect = <Redirect to= {`/otp/${id}`} />
     }
     return (
         <div>
@@ -31,7 +29,18 @@ const Donate = (props) => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <form className ="p-4" onSubmit={submit}>
+                                    <form className ="p-4" onSubmit={(e) => submit(e, id)}>
+                                       <div className="row">
+                                      <div className="col p-3">  <span className="text-center error">{message} </span></div>
+                                        <br/>
+                                       </div>
+                                    <div className="row hide-id">
+                                            <div className="col">
+                                                <input type="text" 
+                                                 value ={ id }
+                                                required className="form-control" disabled />
+                                            </div>
+                                        </div>
                                         <div className="row">
                                             <div className="col">
                                                 <input type="text"
@@ -104,7 +113,10 @@ const Donate = (props) => {
                                 </div>
                                 <div className="col grey-bg ">
                                     {/* <SingleCampaign/> */}
-
+                                    <h3 className="text-center tahnks"> Thank you for supporting.</h3>
+                                    <br/>
+                                    <img className="donate-img" src ={donate} alt="donate"/>
+ 
                                 </div>
                             </div>
                         </div>
