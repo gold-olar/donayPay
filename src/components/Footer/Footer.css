@@ -19,6 +19,15 @@ ul li{
     font-size: 0.9em;
     color: #fff;
 }
+.white{
+    color:#fff;
+}
+.spacing{
+    letter-spacing: 3px;
+}
+.size-adj{
+    font-size: 12px;
+}
 
 .footer h2 a:hover {
     color: #fff;

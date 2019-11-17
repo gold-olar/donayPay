@@ -1,27 +1,28 @@
-import React, { useContext, useEffect, } from 'react';
-import Navbar from '../Navbar/Navbar';
+import React , {useContext} from 'react';
+import {  Redirect } from 'react-router-dom';
+import { FormContext } from '../../contexts/FormContext';
 import { DonateContext } from '../../contexts/donateContext';
+import DashboardNav from '../DashboardNav/DashboardNav';
 import Loader from '../Loader/Loader';
-import { Redirect } from "react-router-dom";
-import SingleCampaign from '../AllCampaignsSingleCampaign/SingleCampaign';
-import './donate.css';
-import donate from './donate.svg'
 import Footer from '../Footer/Footer';
+import profile from './profile.svg';
 
-const Donate = (props) => {
 
+
+const ProfileDatails = (props) => {
     const { onChange, submit, lastName, firstName, email, cardNumber, mm, yy, cvv, pin, loading, amount, OTP, message } = useContext(DonateContext);
+    const { auth } = useContext(FormContext);
+
     let {id} = props.match.params;
 
-
     let redirect = null;
-    if (OTP) {
-        redirect = <Redirect to= {`/otp/${id}`} />
+    if (!auth) {
+        redirect = <Redirect to= {`/login`} />
     }
     return (
         <div>
-            {loading ? <Loader /> : null}
-            <Navbar />
+            {loading ? <Loader/> : null}
+            <DashboardNav />
             {redirect}
             <div className="container">
                 <div className="row p-4">
@@ -29,7 +30,7 @@ const Donate = (props) => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <form className ="p-4" onSubmit={(e) => submit(e, id)}>
+                                    <form className ="p-4">
                                        <div className="row">
                                       <div className="col p-3">  <span className="text-center error">{message} </span></div>
                                         <br/>
@@ -113,9 +114,9 @@ const Donate = (props) => {
                                 </div>
                                 <div className="col grey-bg ">
                                     {/* <SingleCampaign/> */}
-                                    <h3 className="text-center tahnks"> We're glad you are supporting.</h3>
+                                    <h3 className="text-center tahnks">Don't worry, your personal details will be kept secret.</h3>
                                     <br/>
-                                    <img className="donate-img" src ={donate} alt="donate"/>
+                                    <img className="donate-img" src ={profile} alt="donate"/>
  
                                 </div>
                             </div>
@@ -128,5 +129,5 @@ const Donate = (props) => {
         </div>
     );
 }
-
-export default Donate;
+ 
+export default ProfileDatails;

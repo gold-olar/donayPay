@@ -29,8 +29,16 @@ class AllCampaignsContextProvider extends Component {
         // console.log(allCampaigns.data)
     };
 
-  
+    share = (id, story, medium) => {
+        if (medium === "w"){
+            window.open(`https://api.whatsapp.com/send?&text=http://donaypay.herokuapp.com/singleCampaign/${id}. ${story}`);
+        }else {
+            window.open(`https://twitter.com/intent/tweet?text=http://donaypay.herokuapp.com/singleCampaign/${id}. ${story}`);
 
+        }
+    }
+    
+   
     componentDidMount(){
         this.fetchAllCampaigns();
     }
@@ -38,7 +46,7 @@ class AllCampaignsContextProvider extends Component {
     render() {
         return (
             <AllCampaignsContext.Provider
-                value={{...this.state, getSingle: this.getSingle,}}>
+                value={{...this.state, getSingle: this.getSingle, share: this.share}}>
                 {this.props.children}
             </AllCampaignsContext.Provider>
         );

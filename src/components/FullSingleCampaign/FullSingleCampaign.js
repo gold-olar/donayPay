@@ -12,8 +12,7 @@ import NotFound from '../404/404';
 
 const FullSingleCampaign = (props) => {
     const { id } = props.match.params;
-    const { campaigns, message, getSingle } = useContext(AllCampaignsContext);
-    // const single = getSingle(id)
+    const { campaigns,share } = useContext(AllCampaignsContext);
 
     if (campaigns) {
         let x
@@ -62,8 +61,9 @@ const FullSingleCampaign = (props) => {
                                             <li className="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 5,000 </b> </span>  <span className="ml-4"> 1 hr ago</span> </li>
                                             <li className="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 1,000 </b> </span>  <span className="ml-4"> 5 days ago</span> </li>
                                             <li className="list-group-item"> <i className="fas fa-user"></i>  Anonymous  <span className="ml-4 " ><b> ₦ 45,000 </b> </span>  <span className="ml-4"> 7 days ago</span> </li>
-                                            <li className="list-group-item text-center ">   <NavLink to={`/share/${x.id}`} className="card-link btn btn-secondary donay-btn   pl-4">SHARE </NavLink></li>
-                                            <li className="list-group-item text-center ">   <NavLink to={`/donate/${x.id}`} className="card-link btn btn-success donay-btn   pl-4">DONATE </NavLink></li>
+                                            <li className="list-group-item text-center ">   <NavLink onClick={() => {share(x.id, x.description, "w")}} to={`/singleCampaign/${x.id}`} className="card-link btn btn-secondary donay-btn   pl-4"> <i class="fab fa-whatsapp "></i> SHARE   </NavLink></li>
+                                            <li className="list-group-item text-center ">   <NavLink onClick={() => {share(x.id, x.description, "t")}} to={`/singleCampaign/${x.id}`} className="card-link btn btn-primary donay-btn   pl-4"><i class="fab fa-twitter "></i> TWEET  </NavLink></li>
+                                            <li className="list-group-item text-center ">   <NavLink to={`/donate/${x.id}`} className="card-link btn btn-success donay-btn   pl-4"> <i class="fa fa-money" aria-hidden="true"></i> DONATE </NavLink></li>
                                         </ul>
 
                                     </div>

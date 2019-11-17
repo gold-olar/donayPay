@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -50,24 +50,24 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-2  col-md-6 mt-lg-0 mt-4">
                             <div className="footerv2-w3ls">
-                                <h3 className="mb-3 w3f_title">Links</h3>
+                                <h3 className="mb-3 w3f_title">Follow </h3>
                                 <hr />
                                 <ul className="list-w3pvtits">
                                     <li>
-                                        <NavLink to="/"> Explore </NavLink>
+                                        <Link to="https://wa.me/+2347068093818"> <i class="fab fa-whatsapp fa-lg"></i> </Link>
 
                                     </li>
                                     <li className="my-2">
-                                        <NavLink to="/"> Our Mission </NavLink>
+                                        <NavLink to="/"> <i class="fab fa-twitter fa-lg"></i> </NavLink>
                                     </li>
                                     <li className="my-2">
-                                        <NavLink  to="/"> Values </NavLink>
+                                        <NavLink to="/"> <i class="fab fa-instagram fa-lg"></i> </NavLink>
                                     </li>
                                     <li className="mb-2">
-                                    <NavLink  to="/"> Find Us </NavLink>
+                                        <NavLink to="/"> <i class="fab fa-github fa-lg"></i> </NavLink>
                                     </li>
                                     <li>
-                                    <NavLink  to="/"> Privacy Policy </NavLink>
+                                        <NavLink to="/"> <i class="fab fa-linkedin fa-lg"></i> </NavLink>
                                     </li>
                                 </ul>
                             </div>
@@ -78,45 +78,33 @@ const Footer = () => {
                                 <hr />
                                 <ul className="list-w3pvtits">
                                     <li>
-                                    <NavLink  to="/"> More </NavLink>
+                                        <NavLink to="/"> More </NavLink>
                                     </li>
                                     <li className="my-2">
-                                    <NavLink  to="/"> Our Work </NavLink>
+                                        <NavLink to="/"> Our Work </NavLink>
                                     </li>
                                     <li className="my-2">
-                                    <NavLink  to="/"> Explore </NavLink>
+                                        <NavLink to="/"> Explore </NavLink>
                                     </li>
                                     <li className="mb-2">
-                                   <NavLink  to="/"> Contact Us </NavLink>
+                                        <NavLink to="/"> Contact Us </NavLink>
                                     </li>
                                     <li>
-                                    <NavLink  to="/"> References </NavLink>
+                                        <NavLink to="/"> References </NavLink>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-lg-2  col-md-6 mt-lg-0 mt-4">
                             <div className="footerv2-w3ls">
-                                <h3 className="mb-3 w3f_title">Links</h3>
-                                <hr />
-                                <ul className="list-w3pvtits">
-                                    <li className="my-2">
-                                    <NavLink  to="/"> Explore </NavLink>
-                                    </li>
-                                    <li>
-                                    <NavLink  to="/"> Our Mission </NavLink>
-                                    </li>
-                                    <li className="my-2">
-                                    <NavLink  to="/"> Latest Posts </NavLink>
-                                    </li>
-
-                                    <li className="mb-2">
-                                    <NavLink  to="/"> FInd Us </NavLink>
-                                    </li>
-                                    <li>
-                                    <NavLink  to="/"> Terms  </NavLink>
-                                    </li>
-                                </ul>
+                                <h3 className="mb-3 w3f_title">Subscribe</h3>
+                                <hr/>
+                                <p className="white spacing size-adj">
+                           “Giving is not just about making a donation. It is about making a difference.”
+                           <br/>
+                           <br/>
+                           <span className="font-weight"> Kathy Calvin </span>
+                           </p>
                             </div>
                         </div>
                     </div>

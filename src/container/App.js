@@ -19,6 +19,8 @@ import Donate from '../components/Donate/Donate';
 import DonateContextProvider from '../contexts/donateContext';
 import Otp from '../components/OTP/otp';
 import AllCampaignsContextProvider from '../contexts/allCampaignsContext';
+import ProfileDatails from '../components/Profile/Profile';
+import ContactUs from '../components/ContactUs/ContactUs';
 
 
 
@@ -44,6 +46,8 @@ class App extends Component {
                     <Route path = '/donate/:id' exact component={Donate} />
                     <Route path = '/otp/:id' component={Otp} />
                     <Route path = '/campaign/:id'  component={DashboardSingle} />
+                    <Route path = '/profile' exact component={ProfileDatails} />
+                    <Route path = '/contact' exact component={ContactUs} />
                     <Route path='*' exact component={NotFound} />
                   </Switch>
                 </div>

@@ -21,3 +21,9 @@
 .tahnks{
     color: #fff;
 }
+.contact-us-textarea{
+    width: 100%;
+    border-radius: 13px;
+    border: 1px solid #ced4da;
+    padding: .375rem .75rem;
+}

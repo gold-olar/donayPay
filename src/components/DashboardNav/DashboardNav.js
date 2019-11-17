@@ -3,8 +3,11 @@ import {NavLink} from 'react-router-dom';
 import logo from '../Navbar/logo.jpg'
 import { FormContext } from '../../contexts/FormContext';
 
-const DashboardNav = () => {
+const DashboardNav = (props) => {
     const {logOut} = useContext(FormContext);
+    // let {id} = props.match.params;
+    console.log(props)
+
     
     return ( 
         <div>
@@ -23,7 +26,7 @@ const DashboardNav = () => {
                             <input type="checkbox" id="drop" />
                             <ul className="menu">
                                 <li><NavLink to='/' className="nav-link text-uppercase">Home </NavLink></li>
-                                <li><NavLink to='/' className="nav-link text-uppercase"> Profile</NavLink></li>
+                                <li><NavLink to={`/profile`} className="nav-link text-uppercase"> Profile</NavLink></li>
                                 <li><NavLink to='/' onClick={logOut} className="nav-link text-uppercase">Log Out </NavLink></li>
 
 
