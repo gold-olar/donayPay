@@ -28,6 +28,7 @@ const Navbar = () => {
                                 <li><NavLink to='/' className="nav-link text-uppercase"> Home </NavLink></li>
                                 <li><NavLink to='/campaigns' className="nav-link text-uppercase"> Campaigns</NavLink></li>
                                 <li><NavLink to='/contact' className="nav-link text-uppercase">Contact Us </NavLink></li>
+                                <li><NavLink to='/team' className="nav-link text-uppercase">The team </NavLink></li>
 
                             { !auth ?
 

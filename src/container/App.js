@@ -21,6 +21,7 @@ import Otp from '../components/OTP/otp';
 import AllCampaignsContextProvider from '../contexts/allCampaignsContext';
 import ProfileDatails from '../components/Profile/Profile';
 import ContactUs from '../components/ContactUs/ContactUs';
+import TeamPage from '../components/Team/Team';
 
 
 
@@ -48,6 +49,7 @@ class App extends Component {
                     <Route path = '/campaign/:id'  component={DashboardSingle} />
                     <Route path = '/profile' exact component={ProfileDatails} />
                     <Route path = '/contact' exact component={ContactUs} />
+                    <Route path = '/team' exact component={TeamPage} />
                     <Route path='*' exact component={NotFound} />
                   </Switch>
                 </div>

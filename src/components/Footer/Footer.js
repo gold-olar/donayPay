@@ -35,16 +35,15 @@ const Footer = () => {
                                         <NavLink to="/"> Home</NavLink>
                                     </li>
                                     <li className="my-2">
-                                        <NavLink to="/"> How it works </NavLink>
-                                    </li>
-                                    <li className="my-2">
-                                        <NavLink to="/"> Campaigns </NavLink>
+                                        <NavLink to="/campaigns"> Campaigns </NavLink>
                                     </li>
                                     <li className="mb-2">
                                         <NavLink to="/"> Blog </NavLink>
                                     </li>
-                                    <li><NavLink to="/"> About Us </NavLink>
+                                    <li><NavLink to="/team"> The Team </NavLink>
                                     </li>
+                                   
+
                                 </ul>
                             </div>
                         </div>
