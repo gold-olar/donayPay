@@ -62,7 +62,7 @@ const TeamPage = () => {
                             in charge of building the front end of this very application. He is open for contracts and jobs currently. 
                          </p>
 						<ul className="social">
-							<li className="mr-1"><a href="#" className="facebook"><span className="fab fa-facebook-f"></span></a></li>
+							<li className="mr-1"><a href="#" className="insta"><span className="fab fa-insta-f"></span></a></li>
 							<li className="mx-1"><a href="#" className="twitter"><span className="fab fa-twitter"></span></a></li>
 							<li className="mx-1"><a href="#" className="google"><span className="fab fa-google-plus-g"></span></a></li>
 							<li className="mx-1"><a href="#" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
@@ -81,7 +81,7 @@ const TeamPage = () => {
 						<p className="py-4">Donec malesuada ex sit amet pretium sid ornare. Nulla congue scelerisque tellus, utpretium. Mauris suscipit
 						nisi ut ipsum egestas, et pellentesque velit convallis. Phasellus rhoncus tempus. </p>
 						<ul className="social">
-							<li className="mr-1"><a href="#" className="facebook"><span className="fab fa-facebook-f"></span></a></li>
+							<li className="mr-1"><a href="#" className="insta"><span className="fab fa-insta-f"></span></a></li>
 							<li className="mx-1"><a href="#" className="twitter"><span className="fab fa-twitter"></span></a></li>
 							<li className="mx-1"><a href="#" className="google"><span className="fab fa-google-plus-g"></span></a></li>
 							<li className="mx-1"><a href="#" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
@@ -100,7 +100,7 @@ const TeamPage = () => {
 						<p className="py-4">Donec malesuada ex sit amet pretium sid ornare. Nulla congue scelerisque tellus, utpretium. Mauris suscipit
 						nisi ut ipsum egestas, et pellentesque velit convallis. Phasellus rhoncus tempus. </p>
 						<ul className="social">
-							<li className="mr-1"><a href="#" className="facebook"><span className="fab fa-facebook-f"></span></a></li>
+							<li className="mr-1"><a href="#" className="insta"><span className="fab fa-insta-f"></span></a></li>
 							<li className="mx-1"><a href="#" className="twitter"><span className="fab fa-twitter"></span></a></li>
 							<li className="mx-1"><a href="#" className="google"><span className="fab fa-google-plus-g"></span></a></li>
 							<li className="mx-1"><a href="#" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
