@@ -17,7 +17,7 @@ const AllCampaigns = () => {
                 <div className=" a-c-body container-fluid">
                     <h3 className="text-center all-c_header "> ALL CAMPAIGNS </h3>
                     <br />
-                    <div className="row">
+                    <div className="row all-c-r">
                         {
                             campaigns.map((singleCampaign) => {
                                 return (

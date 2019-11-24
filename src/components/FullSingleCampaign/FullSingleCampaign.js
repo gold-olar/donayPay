@@ -26,7 +26,7 @@ const FullSingleCampaign = (props) => {
                             <div className="row p-3">
                                 <br />
 
-                                <div className="col-md-8 ">
+                                <div className="col-md-6 ">
                                     <div className="fullSingleCard shadow animated fadeInLeft ">
                                         <div className="card " >
                                             <img src={`http://res.cloudinary.com/Taycode/${x.image}`} className="card-img-top fullSingle-img" alt="..." />
@@ -52,7 +52,7 @@ const FullSingleCampaign = (props) => {
 
                                 </div>
                                 <div className="col-md-4">
-                                    <div className="card animated fadeInRight">
+                                    <div className="card details-full-sc animated fadeInRight">
                                         <div className="card-body">
                                             <h5 className="card-title"> <span className="naira-n"> ₦ </span> <b> {x.reached_amount} </b> <span className="grey"> raised of </span> <span className="goal--">{x.expected_amount}</span></h5>
                                         </div>
