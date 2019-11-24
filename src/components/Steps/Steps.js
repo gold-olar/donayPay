@@ -4,7 +4,7 @@ import './steps.css';
 
 const Steps = () => {
     return ( 
-        <section className="wow animated fadeInLeft banner-bottom py-5" >
+        <section className="wow animated fadeInLeft banner-bottom steps-- py-5" >
             <h3 className="text-center section-header"> Get Funds in these few steps</h3>
 
         <div className="container py-md-5">

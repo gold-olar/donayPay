@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, } from 'react';
+import React, { useContext } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { DonateContext } from '../../contexts/donateContext';
 import Loader from '../Loader/Loader';
 import { Redirect } from "react-router-dom";
-import SingleCampaign from '../AllCampaignsSingleCampaign/SingleCampaign';
 import './donate.css';
 import donate from './donate.svg'
 import Footer from '../Footer/Footer';

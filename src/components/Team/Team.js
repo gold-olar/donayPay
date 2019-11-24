@@ -62,10 +62,10 @@ const TeamPage = () => {
                             in charge of building the front end of this very application. He is open for contracts and jobs currently. 
                          </p>
 						<ul className="social">
-							<li className="mr-1"><a href="#" className="insta"><span className="fab fa-insta-f"></span></a></li>
-							<li className="mx-1"><a href="#" className="twitter"><span className="fab fa-twitter"></span></a></li>
-							<li className="mx-1"><a href="#" className="google"><span className="fab fa-google-plus-g"></span></a></li>
-							<li className="mx-1"><a href="#" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
+						<li className="mr-1"><a href="https://instagram.com/gold_olar" className="insta"><span className="fab fa-instagram"></span></a></li>
+							<li className="mx-1"><a href="https://twitter.com/gold_olar" className="twitter"><span className="fab fa-twitter"></span></a></li>
+							<li className="mx-1"><a href="https://github.com/gold-olar" className="github"><span className="fab fa-github"></span></a></li>
+							<li className="mx-1"><a href="https://www.linkedin.com/in/samuel-olamide-b05b57189/" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -81,10 +81,10 @@ const TeamPage = () => {
 						<p className="py-4">Donec malesuada ex sit amet pretium sid ornare. Nulla congue scelerisque tellus, utpretium. Mauris suscipit
 						nisi ut ipsum egestas, et pellentesque velit convallis. Phasellus rhoncus tempus. </p>
 						<ul className="social">
-							<li className="mr-1"><a href="#" className="insta"><span className="fab fa-insta-f"></span></a></li>
-							<li className="mx-1"><a href="#" className="twitter"><span className="fab fa-twitter"></span></a></li>
-							<li className="mx-1"><a href="#" className="google"><span className="fab fa-google-plus-g"></span></a></li>
-							<li className="mx-1"><a href="#" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
+						<li className="mr-1"><a href="https://instagram.com/gold_olar" className="insta"><span className="fab fa-instagram"></span></a></li>
+							<li className="mx-1"><a href="https://twitter.com/gold_olar" className="twitter"><span className="fab fa-twitter"></span></a></li>
+							<li className="mx-1"><a href="https://github.com/gold-olar" className="github"><span className="fab fa-github"></span></a></li>
+							<li className="mx-1"><a href="https://www.linkedin.com/in/samuel-olamide-b05b57189/" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -100,10 +100,10 @@ const TeamPage = () => {
 						<p className="py-4">Donec malesuada ex sit amet pretium sid ornare. Nulla congue scelerisque tellus, utpretium. Mauris suscipit
 						nisi ut ipsum egestas, et pellentesque velit convallis. Phasellus rhoncus tempus. </p>
 						<ul className="social">
-							<li className="mr-1"><a href="#" className="insta"><span className="fab fa-insta-f"></span></a></li>
-							<li className="mx-1"><a href="#" className="twitter"><span className="fab fa-twitter"></span></a></li>
-							<li className="mx-1"><a href="#" className="google"><span className="fab fa-google-plus-g"></span></a></li>
-							<li className="mx-1"><a href="#" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
+						<li className="mr-1"><a href="https://instagram.com/gold_olar" className="insta"><span className="fab fa-instagram"></span></a></li>
+							<li className="mx-1"><a href="https://twitter.com/gold_olar" className="twitter"><span className="fab fa-twitter"></span></a></li>
+							<li className="mx-1"><a href="https://github.com/gold-olar" className="github"><span className="fab fa-github"></span></a></li>
+							<li className="mx-1"><a href="https://www.linkedin.com/in/samuel-olamide-b05b57189/" className="linkedin"><span className="fab fa-linkedin-in"></span></a></li>
 						</ul>
 					</div>
 				</div>

@@ -1,52 +1,52 @@
-import React , {useState} from 'react';
+import React, { useState } from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import logo from './logo.jpg'
 import { FormContext } from '../../contexts/FormContext';
 
+const NavBar = (props) => {
+    const [collapsed, setCollapsed] = useState(true);
 
-
-const Navbar = () => {
-    const {auth} = useState(FormContext)
+    const toggleNavbar = () => setCollapsed(!collapsed);
+    const { auth } = useState(FormContext)
 
     return (
-        <header id="home">
-            <div className="container-fluid">
-                <div className="header animated slideInDown d-lg-flex justify-content-between align-items-center py-sm-3 py-2 px-sm-2 px-1">
-                    <div id="logo">
-                        <span><a href="/"> <img  className="logo" src = {logo} alt="logo" /> </a></span>
-                    </div>
-                    <div className="nav_w3ls ml-lg-5">
-                        <nav>
-                            <label className="toggle">
-                                <span></span>
-                                <span> </span>
-                                <span></span>
-                            </label>
-                            <input type="checkbox" id="drop" />
-                            <ul className="menu">
-                                <li><NavLink to='/' className="nav-link text-uppercase"> Home </NavLink></li>
-                                <li><NavLink to='/campaigns' className="nav-link text-uppercase"> Campaigns</NavLink></li>
-                                <li><NavLink to='/contact' className="nav-link text-uppercase">Contact Us </NavLink></li>
-                                <li><NavLink to='/team' className="nav-link text-uppercase">The team </NavLink></li>
+        <div>
+            <Navbar expand="md" color="faded" className="header animated slideInDown d-lg-flex justify-content-between align-items-center py-sm-3 py-2 px-sm-2 px-1" light>
+                <NavbarBrand href="/" className="mr-auto"> <span> <img className="logo" src={logo} alt="logo" /> </span></NavbarBrand>
+                <NavbarToggler onClick={toggleNavbar} className="mr-2" />
+                <Collapse isOpen={!collapsed} navbar>
+                    <Nav navbar className="ml-auto" >
+                            <NavLink to='/' className="nav-link text-uppercase"> Home </NavLink>
+                            <NavLink to='/campaigns' className="nav-link text-uppercase"> Campaigns</NavLink>
+                            <NavLink to='/contact' className="nav-link text-uppercase">Contact Us </NavLink>
+                            <NavLink to='/team' className="nav-link text-uppercase">The team </NavLink>
 
-                            { !auth ?
-
-                                <li className="ml-xl-5 ml-lg-2 mt-lg-0 mt-sm-4 mt-3">
-                                <NavLink to='/login' className="reqe-button text-uppercase login-btn">Log in </NavLink>
+                        {!auth ?
+                         
                                 <NavLink to='/signup' className="reqe-button text-uppercase signup-btn">Sign Up </NavLink>
-                                </li>
-                                :
-                                <NavLink to='/' className="reqe-button text-uppercase login-btn">Log Out </NavLink>
+                              
+                            :
+                                <NavLink to='/' className="reqe-button text-uppercase login-btn">Log out </NavLink>
 
-                            }
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
+                        }
+                        {
+                            !auth ?
+                                <NavLink to='/login' className="reqe-button text-uppercase login-btn">Log in </NavLink>
+                            :
+                            <div>
+
+                            </div>
+
+
+                        }
+
+                    </Nav>
+                </Collapse>
+            </Navbar>
+        </div>
     );
 }
 
-export default Navbar;
+export default NavBar;

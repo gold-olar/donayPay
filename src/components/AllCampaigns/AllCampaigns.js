@@ -15,14 +15,14 @@ const AllCampaigns = () => {
             {message ? <p className="text-center"> {message} </p> : null}
             {campaigns ?
                 <div className=" a-c-body container-fluid">
-                    <h3 className="text-center all-c_header "> ALL CAMPAIGNS</h3>
+                    <h3 className="text-center all-c_header "> ALL CAMPAIGNS </h3>
                     <br />
                     <div className="row">
                         {
                             campaigns.map((singleCampaign) => {
                                 return (
-                                    <div className="col-md-3">
-                                        <SingleCampaign key={singleCampaign.id} image={singleCampaign.image} title={singleCampaign.title} story={singleCampaign.description}
+                                    <div key={singleCampaign.id} className="col-md-3">
+                                        <SingleCampaign image={singleCampaign.image} title={singleCampaign.title} story={singleCampaign.description}
                                             id={singleCampaign.id} goal={singleCampaign.expected_amount} reached={singleCampaign.reached_amount}
                                             percentage={singleCampaign.percentage}
                                         />

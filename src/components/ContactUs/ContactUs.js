@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import { Redirect } from 'react-router-dom';
-import Loader from '../Loader/Loader';
+import React from 'react';
+// import Loader from '../Loader/Loader';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import contact from './contact.svg';
@@ -8,10 +7,7 @@ import contact from './contact.svg';
 
 
 const ContactUs = () => {
-    // let redirect = null;
-    // if () {
-    //     redirect = <Redirect to= {`/`} />
-    // }
+   
     return (
         <div>
             {/* {loading ? <Loader/> : null} */}

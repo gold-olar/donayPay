@@ -1,14 +1,12 @@
-@media (min-width: 576px) {  }
-
-@media (min-width: 768px) {  }
-
-@media (min-width: 992px) {  }
-
 @media (max-width: 1200px) {
     .image_header {
         height: 60vh;
         width: auto;
     }
+    .single-campaign-card {
+        width: 18rem;
+    }
+
   }
   @media (max-width: 1100px) {
     .image_header {
@@ -19,6 +17,10 @@
         padding: .5rem .3rem;
     
     }
+    .single-campaign-card {
+        width: 108%;
+    }
+
   }
   @media (max-width: 1000px) {
     .image_header {
@@ -55,6 +57,9 @@
         float: none;
     
     }
+    span.border-line{
+        display: none !important;
+    }
     
     
   }
@@ -71,6 +76,15 @@
     }
     .stats-count {
         font-size: 212%;
+    }
+    .form-card {
+        margin-left: -17%;
+        width: 120%;
+    
+    }
+    .sign-up-header {
+        margin-right: 19%;
+        font-size: 240%;
     }
 
   }
@@ -109,4 +123,136 @@
     .phone-img {
         height: 228px;
     }
+    .dwnld {
+        width: 117px;
+        height: 120px;
+    
+    }
+    .dwnld-play {
+        height: 54px;
+        width: 151px;
+    
+    }
+    .phone-img {
+        height: 217px;
+    }
+    .bottom-grids h4 {
+        font-size: 19px;
+    }
+
   }
+ 
+@media (max-width: 700px) {
+    .mt-5, .my-5 {
+        margin-top: 0px !important;
+    }
+    .footerv2-w3ls{
+        width: 50%;
+        display: inline !important;
+    }
+    .app-advert {
+        padding: 5%;
+    }
+    .sign-up-header {
+
+        margin-right: 85%;
+        font-size: 130%;
+    
+    }
+    .light-font-weight {
+        display: none;
+    
+    }
+
+  }
+
+  @media (max-width: 770px) {
+    .navbar-nav .nav-link {
+       
+        margin: auto;
+    }
+    .signup-btn {
+        margin: auto !important;
+        margin-bottom: 5px !important;
+    }
+    .login-btn {
+        margin: auto !important;
+    }
+  }
+  @media (max-width: 600px) {
+    .stats-div {
+        font-size: 0.6rem;
+    }
+    .app-advert {
+      font-size: 9px !important;
+    }
+    .dwnld {
+        width: 77px;
+        height: 65px;
+    }
+    .dwnld-play {
+        height: 39px;
+        width: 97px;
+    }
+    .phone-img {
+        height: 161px;
+    }
+  }
+  @media (max-width: 500px) {
+   
+    .steps--{
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+
+    }
+    .form-card {
+        margin-left: 0%;
+        width: 111%;
+    
+    }
+    .sign-up-header {
+        margin-right: 0%;
+        font-size: 174%;
+    }
+    .light-font-weight {
+        display: block;
+        font-size: 54%;
+    }
+    
+
+  }
+  @media (max-width: 400px) {
+    .header-desc {
+
+        font-weight: 900;
+        padding: 30%;
+        text-align: center;
+        font-size: 191%;
+        width: 183% !important;
+        margin: auto;
+        position: absolute;
+        left: 7%;
+        top: 10%;
+    
+    }
+    .phone-img {
+        height: 231px;
+    }
+    .available {
+        text-align: center;
+        font-weight: 600;    
+    }
+}
+@media(max-width: 300px){
+    .stats-div {
+
+        clip-path: none;
+        padding: 20% 0% 10% 0%;
+    
+    }
+    .section-header {
+        font-size: 150%;
+    
+    }
+}

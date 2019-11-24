@@ -53,20 +53,20 @@ const Footer = () => {
                                 <hr />
                                 <ul className="list-w3pvtits">
                                     <li>
-                                        <Link to="https://wa.me/+2347068093818"> <i class="fab fa-whatsapp fa-lg"></i> </Link>
+                                        <Link to="https://wa.me/+2347068093818"> <i className="fab fa-whatsapp fa-lg"></i> </Link>
 
                                     </li>
                                     <li className="my-2">
-                                        <NavLink to="/"> <i class="fab fa-twitter fa-lg"></i> </NavLink>
+                                        <NavLink to="/"> <i className="fab fa-twitter fa-lg"></i> </NavLink>
                                     </li>
                                     <li className="my-2">
-                                        <NavLink to="/"> <i class="fab fa-instagram fa-lg"></i> </NavLink>
+                                        <NavLink to="/"> <i className="fab fa-instagram fa-lg"></i> </NavLink>
                                     </li>
                                     <li className="mb-2">
-                                        <NavLink to="/"> <i class="fab fa-github fa-lg"></i> </NavLink>
+                                        <NavLink to="/"> <i className="fab fa-github fa-lg"></i> </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/"> <i class="fab fa-linkedin fa-lg"></i> </NavLink>
+                                        <NavLink to="/"> <i className="fab fa-linkedin fa-lg"></i> </NavLink>
                                     </li>
                                 </ul>
                             </div>
