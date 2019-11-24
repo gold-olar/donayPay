@@ -1,10 +1,11 @@
 .single-campaign-card{
     border: 1px solid rgba(85, 85, 85, 0.476);
-    margin-bottom: 5%;
-    width: 19rem;
+    width: 90%;
     height: 400px !important;
     box-sizing: border-box;
     overflow: hidden;
+    margin:auto;
+    margin-bottom: 5% !important;
     transition: all 0.3s;
 }
 .single-campaign-card:hover{

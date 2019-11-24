@@ -17,10 +17,7 @@
         padding: .5rem .3rem;
     
     }
-    .single-campaign-card {
-        width: 108%;
-    }
-
+   
   }
   @media (max-width: 1000px) {
     .image_header {
@@ -199,6 +196,16 @@
     }
   }
   @media (max-width: 500px) {
+    .app-advert {
+        padding: 5% !important;
+    }
+
+    .phone-img {
+        height: 131px;
+    }
+    .section-header {
+       font-size: 156%;
+    }
    
     .steps--{
         background-size: cover;
@@ -211,6 +218,14 @@
         width: 111%;
     
     }
+    .dwnld {
+        width: 61px;
+        height: 31px;
+    }
+    .dwnld-play {
+        height: 31px;
+        width: 77px;
+    }    
     .sign-up-header {
         margin-right: 0%;
         font-size: 174%;
@@ -219,16 +234,33 @@
         display: block;
         font-size: 54%;
     }
+    .header-desc {
+        font-weight: 900;
+        padding: 30%;
+        text-align: center;
+        font-size: 195%;
+        width: 183% !important;
+        margin: auto;
+        position: absolute;
+        left: 7%;
+        top: 10%;
+    
+    }
     
 
   }
   @media (max-width: 400px) {
+    .stats-div {
+        clip-path: none;
+        padding: 20% 0% 10% 0%;
+    
+    }
+   
     .header-desc {
-
         font-weight: 900;
         padding: 30%;
         text-align: center;
-        font-size: 191%;
+        font-size: 155%;
         width: 183% !important;
         margin: auto;
         position: absolute;

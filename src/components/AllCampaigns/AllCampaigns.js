@@ -21,7 +21,7 @@ const AllCampaigns = () => {
                         {
                             campaigns.map((singleCampaign) => {
                                 return (
-                                    <div key={singleCampaign.id} className="col-md-3">
+                                    <div key={singleCampaign.id} className="col-md-4">
                                         <SingleCampaign image={singleCampaign.image} title={singleCampaign.title} story={singleCampaign.description}
                                             id={singleCampaign.id} goal={singleCampaign.expected_amount} reached={singleCampaign.reached_amount}
                                             percentage={singleCampaign.percentage}

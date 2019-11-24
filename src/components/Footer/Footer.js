@@ -96,7 +96,7 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-2  col-md-6 mt-lg-0 mt-4">
                             <div className="footerv2-w3ls">
-                                <h3 className="mb-3 w3f_title">Subscribe</h3>
+                                <h3 className="mb-3 w3f_title">Quote</h3>
                                 <hr/>
                                 <p className="white spacing size-adj">
                            “Giving is not just about making a donation. It is about making a difference.”
