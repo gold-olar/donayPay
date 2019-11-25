@@ -28,7 +28,7 @@ const Donate = (props) => {
                         <div className="container">
                             <div className="row">
                                 <div className="col">
-                                    <form className ="p-4" onSubmit={(e) => submit(e, id)}>
+                                    <form className ="p-4 donate-form--" onSubmit={(e) => submit(e, id)}>
                                        <div className="row">
                                       <div className="col p-3">  <span className="text-center error">{message} </span></div>
                                         <br/>

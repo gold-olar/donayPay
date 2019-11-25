@@ -17,11 +17,11 @@ const Dashboard = () => {
         redirect = <Redirect to = "/login"/>
     }
     return (
-        <div>
+        <div className="container" >
         {redirect}
             <DashboardNav />
             {message ? <p className=" text-center "> {message} </p> : null }
-            <div className="board animated slideInLeft ">
+            <div className="board animated slideInLeft row ">
                 {/* RENDER EACH CAMPAIGN CARDS HERE  */}
 
 

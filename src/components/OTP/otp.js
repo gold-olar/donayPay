@@ -17,26 +17,6 @@ const Otp = (props) => {
         redirect = <Redirect to ="/"/>
     }
     return (
-        // <div>
-        //     <Navbar />
-        //     {redirect}
-        //     {loading ? <Loader /> : null}
-          
-
-        //     <div className="container">
-        //         <div className="row">
-        //             <form onSubmit={(e) => {verify(e, id)}}> 
-        //                 <div class="form-group">
-        //                     <label for="khwrbkf">Enter OTP CODE</label>
-        //                     <input type="text"
-        //                 onChange={(e) => onChange(e, "otp")} value={otp} class="form-control" placeholder="OTP code" />
-        //                 </div>
-        //                 <button type="submit" class="btn btn-primary">CONFIRM PAYMENT</button>
-
-        //             </form>
-        //         </div>
-        //     </div >
-        //     </div>
         <div>
             {loading ? <Loader /> : null}
             <Navbar />
@@ -61,7 +41,7 @@ const Otp = (props) => {
                                         </div>
                                         <div className="row">
                                             <div className="col">
-                                            <input type="text"
+                                            <input type="text" required
                                            onChange={(e) => onChange(e, "otp")} value={otp} 
                                            class="form-control" placeholder="OTP code" />
                                             </div>

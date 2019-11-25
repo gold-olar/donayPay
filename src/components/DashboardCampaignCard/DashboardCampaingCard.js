@@ -6,7 +6,7 @@ import './campaigncard.css'
 
 const DashboardCampaignCard = () => {
     return (
-        <div className="margin-left">
+        <div className="margin-left col">
             
                 <div>
                     <div className="card shadow campaignCard" >

@@ -62,6 +62,10 @@
     
   }
   @media (max-width: 900px) {
+    .donate-img {
+        width: 278px;
+    }
+    
     .single-campaign-card{
         width: 100%;
       }
@@ -154,6 +158,10 @@
   }
  
 @media (max-width: 700px) {
+    .grey-bg{
+        display: none;
+    }
+
     .fullSingleCard{
         width: 100% !important;
         margin-bottom: 5%;
@@ -223,6 +231,10 @@
   @media (max-width: 500px) {
     .app-advert {
         padding: 5% !important;
+    }
+    .donate-form--{
+        padding: 1% !important;
+        padding-bottom: 6% !important;
     }
     .all-c-r{
         padding: 10%;
