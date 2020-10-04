@@ -79,8 +79,8 @@ const Donate = (props) => {
                                                 <input 
                                                 type="email" 
                                                 onChange = {(e) => onChange(e, "email")}
-                                                value ={ email }                                                
-                                                required 
+                                                value ={ email }
+                                                required
                                                 className="form-control" 
                                                 placeholder="Email" />
                                             </div>
