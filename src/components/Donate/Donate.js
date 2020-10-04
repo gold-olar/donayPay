@@ -17,6 +17,8 @@ const Donate = (props) => {
     if (OTP) {
         redirect = <Redirect to= {`/otp/${id}`} />
     }
+
+
     return (
         <div>
             {loading ? <Loader /> : null}
@@ -35,71 +37,104 @@ const Donate = (props) => {
                                        </div>
                                     <div className="row hide-id">
                                             <div className="col">
-                                                <input type="text" 
-                                                 value ={ id }
-                                                required className="form-control" disabled />
+                                                <input
+                                                type="text" 
+                                                value ={ id }
+                                                required
+                                                className="form-control"
+                                                disabled />
                                             </div>
                                         </div>
                                         <div className="row">
                                             <div className="col">
-                                                <input type="text"
-                                                 onChange = {(e) => onChange(e, "firstName")} value ={ firstName }
-                                                 required className="form-control" placeholder="First name" />
+                                                <input
+                                                type="text"
+                                                onChange = {(e) => onChange(e, "firstName")}
+                                                value ={ firstName }
+                                                required
+                                                className="form-control"
+                                                placeholder="First name" />
                                             </div>
                                             <div className="col">
-                                                <input type="text" 
-                                                 onChange = {(e) => onChange(e, "lastName")} value ={ lastName }
-                                                required className="form-control" placeholder="Last name" />
+                                                <input 
+                                                type="text" 
+                                                onChange = {(e) => onChange(e, "lastName")}
+                                                value ={ lastName }
+                                                required className="form-control" 
+                                                placeholder="Last name" />
                                             </div>
                                         </div>
                                         <br/>
                                         <div className="row">
                                             <div className="col">
-                                                <input type="text" 
-                                                 onChange = {(e) => onChange(e, "cardNumber")} value ={ cardNumber }
-
-                                                required className="form-control" placeholder="Card Number" />
+                                                <input
+                                                type="text" 
+                                                onChange = {(e) => onChange(e, "cardNumber")}                                                
+                                                value ={ cardNumber }
+                                                required
+                                                className="form-control"
+                                                placeholder="Card Number" />
                                             </div>
                                             <div className="col">
-                                                <input type="email" 
-                                                 onChange = {(e) => onChange(e, "email")} value ={ email }
-
-                                                required className="form-control" placeholder="Email" />
+                                                <input 
+                                                type="email" 
+                                                onChange = {(e) => onChange(e, "email")}
+                                                value ={ email }                                                
+                                                required 
+                                                className="form-control" 
+                                                placeholder="Email" />
                                             </div>
                                         </div>
                                         <br></br>
                                         <div className="row">
                                             <div className="col">
-                                                <input type="text" 
-                                                 onChange = {(e) => onChange(e, "amount")} value ={ amount }
-                                                required className="form-control" placeholder="Amount" />
+                                                <input 
+                                                type="text" 
+                                                onChange = {(e) => onChange(e, "amount")} 
+                                                value ={ amount }
+                                                required 
+                                                className="form-control"
+                                                placeholder="Amount" />
                                             </div>
                                             <div className="col">
-                                                <input type="text"
-                                                 onChange = {(e) => onChange(e, "pin")} value ={ pin }
-                                                required className="form-control" placeholder="PIN" />
+                                                <input
+                                                type="text"
+                                                onChange = {(e) => onChange(e, "pin")}
+                                                value ={ pin }
+                                                required
+                                                className="form-control"
+                                                placeholder="PIN" />
                                             </div>
                                             
                                         </div>
                                         <br/>
                                     <div className="row">
                                             <div className="col">
-                                                <input type="text" 
-                                                 onChange = {(e) => onChange(e, "mm")} value ={ mm }
-
-                                                 required className="form-control" placeholder="MM" />
+                                                <input 
+                                                type="text" 
+                                                onChange = {(e) => onChange(e, "mm")} 
+                                                value ={ mm }
+                                                required
+                                                className="form-control" 
+                                                placeholder="MM" />
                                             </div>
                                             <div className="col">
-                                                <input type="text" 
-                                                 onChange = {(e) => onChange(e, "yy")} value ={ yy }
-
-                                                required className="form-control" placeholder="YY" />
+                                                <input 
+                                                type="text" 
+                                                onChange = {(e) => onChange(e, "yy")} 
+                                                value ={ yy }
+                                                required
+                                                className="form-control"
+                                                placeholder="YY" />
                                             </div>
                                             <div className="col">
-                                                <input type="text" required
-                                                 onChange = {(e) => onChange(e, "cvv")} value ={ cvv }
-
-                                                className="form-control" placeholder="CVV" />
+                                                <input 
+                                                type="text"
+                                                required
+                                                onChange = {(e) => onChange(e, "cvv")}
+                                                value ={ cvv }
+                                                className="form-control"
+                                                placeholder="CVV" />
                                             </div>
                                         </div>
                                         <br/>
