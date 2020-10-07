@@ -25,6 +25,7 @@ const AllCampaigns = () => {
                                         <SingleCampaign image={singleCampaign.image} title={singleCampaign.title} story={singleCampaign.description}
                                             id={singleCampaign.id} goal={singleCampaign.expected_amount} reached={singleCampaign.reached_amount}
                                             percentage={singleCampaign.percentage}
+                                        
                                         />
                                     </div>
                                 )
